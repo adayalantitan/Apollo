@@ -1,4 +1,0 @@
-Apollo
-======
-
-Image Management
