@@ -1,0 +1,28 @@
+﻿body {overflow:scroll !important;}
+.datepicker, .button {}
+input.ui-button {padding: 0.3em 0.6em !important}
+.ui-button {font-size:9px !important;height:2.5em !important;}
+.featureTable {font-size:10px !important;width:100%;/*white-space:nowrap;*/}
+.featureTable tr {font-size:10px;}
+.featureTable td.bookingCell {border:none !imporant;padding:none !important;cursor:pointer;}
+.featureTable td.statusClass1, .featureTable td.statusClass2,
+.featureTable td.statusClass3, .featureTable td.statusClass4,
+.featureTable td.statusClass5 {border:none !imporant;padding:none !important;cursor:pointer;}
+.featureTable td {border:1px solid #333333;text-align:left;font-size:10px;padding:1px;}
+.featureTable th {border:1px solid #ffffff;text-align:center;padding:2px;font-size:10px;background-color:#000000;color:#ffffff;}        
+.bookingTableHeader td {border:1px solid #ffffff;text-align:center;padding:2px;font-size:10px;font-weight:bold;background-color:#000000;color:#ffffff;}        
+.bookingTableFooter td {background-color:Black;color:Red;font-weight:bold;font-size:13px;padding:3px;}
+.bookingTableFooter a, .bookingTableFooter a:hover {color:White;text-decoration:none;}
+.requiredIndicator {color:#ff0000;font-weight:bold;font-style:italic;margin-left:5px;}
+.hiddenButton {display:none;}
+.statusClass1{background-color:#FFCC99;}
+.statusClass2{background-color:#CCFFFF;}
+.statusClass3{background-color:#FCF305;}
+.statusClass4{background-color:#99CC00;}
+.statusClass5{background-color:#DD0806;}        
+.statusClass6{background-color:#cccccc;}
+#keyDisplay table {border:1px solid #333333;}
+#keyDisplay table td {border:1px solid#333333;text-align:center;font-size:10px;padding:2px;}
+h3 {font-size:16px;}
+h4 {font-size:14px;}
+li {font-size:12px;}

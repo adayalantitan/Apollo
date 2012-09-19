@@ -1,0 +1,195 @@
+﻿<%@ WebHandler Language="C#" Class="Apollo.DigitalLibraryPoPHandler" %>
+
+using System;
+using System.Web;
+using System.IO;
+using System.Data;
+using System.Collections;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Titan.DataIO;
+namespace Apollo
+{
+    public class DigitalLibraryPoPHandler : IHttpHandler
+    {
+
+        public void ProcessRequest(HttpContext context)
+        {
+            try
+            {
+                int imageId = int.Parse(context.Request["i"] ?? "-1");
+                if (imageId == -1)
+                {
+                    throw new ArgumentOutOfRangeException("i", "Image Id was not specified");
+                }
+
+                DataSet imageTaggingData;
+                using (IO io = new IO(WebCommon.ConnectionString))
+                {
+                    imageTaggingData = io.ExecuteDataSetQuery(IO.CreateCommandFromStoredProc("DIGITALLIBRARY_GETTAGDETAIL", Param.CreateParam("FILEID", SqlDbType.Int, imageId)));
+                }
+
+                string filePath = string.Format("{0}{1}/{2}.jpg", DigitalLibraryImaging.ImageFilePath, DigitalLibraryImaging.GetDigitalLibraryFileFolder(imageId), imageId);
+                string logoFilePath = "/Images/T360Wurl.wmf";
+
+                iTextSharp.text.Jpeg docImage;
+                iTextSharp.text.ImgWMF logoImage;
+
+                using (StreamReader imageStream = new StreamReader(context.Server.MapPath(filePath)))
+                {
+                    System.Drawing.Image originalImage = System.Drawing.Image.FromStream(imageStream.BaseStream);
+                    System.Drawing.Image image = DigitalLibraryImaging.GetImage(originalImage, 1200, 800, 96, false, false, string.Empty);
+                    docImage = new Jpeg(iTextSharp.text.Image.GetInstance(image, BaseColor.WHITE));
+                    docImage.ScaleToFit(700f, 520f);
+                    docImage.SetDpi(96, 96);
+                }
+                using (StreamReader imageStream = new StreamReader(context.Server.MapPath(logoFilePath)))
+                {
+                    System.Drawing.Imaging.Metafile emfFile = new System.Drawing.Imaging.Metafile(imageStream.BaseStream);
+                    logoImage = new ImgWMF(context.Server.MapPath(logoFilePath));
+                    logoImage.ScaleToFit(120f, 35f);
+                    logoImage.SetDpi(96, 96);
+                }
+
+                Document myDoc;
+                bool isLandscape = false;
+                if (docImage.Width > docImage.Height)
+                {//Landscape
+                    myDoc = new Document(PageSize.LETTER.Rotate(), 36f, 36f, 36f, 0f);
+                    isLandscape = true;
+                }
+                else
+                {
+                    myDoc = new Document(PageSize.LETTER, 36f, 36f, 36f, 0f);
+                    docImage.Alignment = Image.ALIGN_MIDDLE;
+                }
+                PdfWriter popWriter = PdfWriter.GetInstance(myDoc, context.Response.OutputStream);
+                myDoc.Open();
+
+                Font titanFont = FontFactory.GetFont(FontFactory.HELVETICA, 24f, Font.BOLDITALIC, new BaseColor(0, 187, 237));
+                Phrase mediaPhrase;
+                Phrase marketPhrase;
+                Phrase advertiserPhrase;
+                string contractNumber = string.Empty;
+                string mediaType = string.Empty;
+                string mediaForm = string.Empty;
+
+                if (imageTaggingData.Tables[1].Rows.Count != 0)
+                {
+                    mediaType = Convert.ToString(IO.GetDataRowValue(imageTaggingData.Tables[1].Rows[0], "MEDIA_TYPE", ""));
+                    mediaForm = Convert.ToString(IO.GetDataRowValue(imageTaggingData.Tables[1].Rows[0], "MEDIA_FORM", ""));
+                    if (mediaForm.Contains("("))
+                    {
+                        mediaForm = mediaForm.Substring(0, mediaForm.IndexOf("(")).Trim();
+                    }
+                    mediaPhrase = new Phrase(string.Format("{0} {1}", mediaType, mediaForm).ToLower(), titanFont);
+                    marketPhrase = new Phrase(string.Format("{0}", IO.GetDataRowValue(imageTaggingData.Tables[1].Rows[0], "MARKET", "")).ToLower(), titanFont);
+                    advertiserPhrase = new Phrase(string.Format("{0}", IO.GetDataRowValue(imageTaggingData.Tables[1].Rows[0], "ADVERTISER", "")), new Font(Font.FontFamily.HELVETICA, 18f, Font.BOLDITALIC, new BaseColor(128, 128, 128)));
+                    contractNumber = Convert.ToString(IO.GetDataRowValue(imageTaggingData.Tables[1].Rows[0], "CONTRACT_NUMBER", ""));
+                }
+                else
+                {
+                    mediaPhrase = new Phrase("", titanFont);
+                    marketPhrase = new Phrase("", titanFont);
+                    advertiserPhrase = new Phrase("", new Font(Font.FontFamily.HELVETICA, 18f, Font.BOLDITALIC, new BaseColor(128, 128, 128)));
+                }
+
+                context.Response.ContentType = "application/pdf";
+                context.Response.AddHeader("Content-Disposition", string.Format("attachment; filename=DigitalLibraryPoPImage_Id_{0}{1}.pdf", imageId, (String.IsNullOrEmpty(contractNumber) ? "" : string.Format("_Contract_{0}", contractNumber))));
+
+                PdfPTable topTable = new PdfPTable(2);
+                float[] totalWidths = { PageSize.LETTER.Width / 2, PageSize.LETTER.Width / 2 };
+                topTable.SetWidthPercentage(totalWidths, PageSize.LETTER);
+                topTable.SpacingBefore = 0f;
+                topTable.SpacingAfter = 10f;
+                PdfPCell cell = new PdfPCell(mediaPhrase);
+                cell.HorizontalAlignment = Image.ALIGN_LEFT;
+                cell.VerticalAlignment = Image.ALIGN_MIDDLE;
+                cell.BorderColor = new BaseColor(255, 255, 255);
+                topTable.AddCell(cell);
+                cell = new PdfPCell(marketPhrase);
+                cell.HorizontalAlignment = Image.ALIGN_RIGHT;
+                cell.VerticalAlignment = Image.ALIGN_MIDDLE;
+                cell.BorderColor = new BaseColor(255, 255, 255);
+                topTable.AddCell(cell);
+
+                PdfPTable bottomTable = new PdfPTable(2);
+                bottomTable.SetWidthPercentage(totalWidths, PageSize.LETTER);
+                bottomTable.SpacingBefore = 10f;
+                bottomTable.SpacingAfter = 0f;
+
+                cell = new PdfPCell(advertiserPhrase);
+                cell.HorizontalAlignment = Image.ALIGN_LEFT;
+                cell.VerticalAlignment = Image.ALIGN_MIDDLE;
+                cell.BorderColor = new BaseColor(255, 255, 255);
+                bottomTable.AddCell(cell);
+
+                cell = new PdfPCell(logoImage);
+                cell.HorizontalAlignment = Image.ALIGN_RIGHT;
+                cell.VerticalAlignment = Image.ALIGN_MIDDLE;
+                cell.BorderColor = new BaseColor(255, 255, 255);
+                bottomTable.AddCell(cell);
+
+                myDoc.Add(topTable);
+
+                if (isLandscape)
+                {
+                    myDoc.Add(docImage);
+                }
+                else
+                {
+                    float[] singleWidth = { PageSize.LETTER.Width };
+                    PdfPTable imageTable = new PdfPTable(1);
+                    imageTable.SetWidthPercentage(singleWidth, PageSize.LETTER);
+                    cell = new PdfPCell(docImage);
+                    cell.HorizontalAlignment = Image.ALIGN_CENTER;
+                    cell.VerticalAlignment = Image.ALIGN_MIDDLE;
+                    cell.BorderColor = new BaseColor(255, 255, 255);
+                    cell.FixedHeight = PageSize.LETTER.Height - 180f;
+                    imageTable.AddCell(cell);
+                    myDoc.Add(imageTable);
+                }
+
+                myDoc.Add(bottomTable);
+                myDoc.Close();
+            }
+            catch (System.Threading.ThreadAbortException)
+            {
+                WebCommon.LogExceptionInfo(new Exception(string.Format("Could not generate PoP Document for Image: {0}. The thread was being aborted.", int.Parse(context.Request["i"] ?? "-1"))));
+            }
+            catch (Exception ex)
+            {
+                WebCommon.LogExceptionInfo(new Exception(string.Format("Could not generate PoP Document for Image: {0}", int.Parse(context.Request["i"] ?? "-1")), ex));
+                context.Response.ContentType = "text/plain";
+                context.Response.Write("An error has occurred.");
+            }
+            //finally
+            //{
+            //    WebCommon.WriteDebugMessage("I am attempting to flush and end the response in the PoP Handler.");
+            //    try
+            //    {
+            //        context.Response.Flush();
+            //        context.Response.End();
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        WebCommon.LogExceptionInfo(ex);
+            //        WebCommon.WriteDebugMessage("An error occurred while attempting to flush and end the response in the PoP Handler.");
+            //    }
+            //    finally
+            //    {
+            //        WebCommon.WriteDebugMessage("Ending response.");
+            //        context.Response.End();
+            //    }                
+            //}
+        }
+
+        public bool IsReusable
+        {
+            get
+            {
+                return false;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/App_MasterPages/Apollo.master" AutoEventWireup="false" CodeFile="ApolloSearchHorizSplit.master.cs" Inherits="Apollo.ApolloSearchHorizSplit" %>
+<%@ MasterType VirtualPath="~/App_MasterPages/Apollo.Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <script type="text/javascript" language="javascript">
+        var globalGridCloseButtonId = '<%=closeGrid.ClientID %>';
+        function CloseGlobalGrid(){
+            $get('<%=gridPanel.ClientID %>').style.display="none";
+            $('#globalGrid').GridUnload('globalGrid');
+        }
+    </script> 
+    <asp:ContentPlaceHolder ID="reportCriteriaPanel" runat="server" />
+    <div style="text-align:center;width:100%;margin-top:5px;z-index:400 !important;">
+        <asp:ContentPlaceHolder ID="reportListPanel" runat="server" />    
+        <asp:Button ID="globalGridDummy" runat="server" style="display:none" UseSubmitBehavior="false" />
+        <ajax:ModalPopupExtender ID="globalGridPopupExtender" runat="server" TargetControlID="globalGridDummy" BehaviorID="globalGridPopupExtBehavior"
+            PopupControlID="gridPanel" BackgroundCssClass="popupbg" DropShadow="true" CancelControlID="closeGrid" />        
+        <div id="gridPanel" runat="server" style="width:auto;border:1px solid #333333;background-color:White;padding:10px;display:none;">
+            <div style="float:right"><asp:ImageButton ID="closeGrid" runat="server" ImageUrl="/Images/dl/icon_tooltip_close.png" style="cursor:pointer;margin:5px 3px;" OnClientClick="CloseGlobalGrid();" /></div>
+            <br />
+            <div style="margin:0 auto;">
+                <div style="width:95%;margin:20px;">
+                    <table id="globalGrid"></table>
+                </div>
+                <div id="globalGridPager"></div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+

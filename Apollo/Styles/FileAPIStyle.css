@@ -1,0 +1,15 @@
+﻿.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.clearfix { display: inline-block; }
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+/* Drag drop upload styles */
+#dropZone, #output {min-width: 940px;min-height: 280px;padding: 10px;border: 2px dotted #fff;-moz-border-radius: 15px;text-align: center;position: relative;}
+#dropZone:before, #output:before {content: "Drag and Drop to upload!";color: #333;font-size: 30px;font-weight: bold;opacity: 0.5;text-shadow: 1px 1px #000;position: absolute;
+    width: 100%;left: 0;top: 50%;margin: -25px 0 0;z-index: 1;}
+#dropZone ul li, #output ul li {float: left;margin: 0 10px 10px 0;list-style: none;position: relative;z-index: 2;}
+#dropZone li a, #output li a {opacity: 0.5;}
+#dropZone li.loaded a, #output li.loaded a {opacity: 1;}
+#dropZone li.loaded .progressBar, #output li.loaded .progressBar {display: none;}
+#dropZone li .progressBar, #output li .progressBar {position: absolute;top:50%;left: 50%;margin: -10px 0 0 -50px;width: 100px;
+    height: 15px;border: 1px solid #000;-moz-border-radius: 10px;-moz-box-shadow: 1px 1px 2px #fff;}
+#dropZone li .progressBar p, #output li .progressBar p {color:#ffffff;font-weight:bold;width: 20px;height: 15px;-moz-border-radius: 10px;background-color: #12B5EA;}

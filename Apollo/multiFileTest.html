@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script type="text/javascript" language="javascript">
+			function getFiles(){
+				var files = document.getElementById("inputFiles").files;			 
+				// or, for a drag event e:
+				// var dt = e.dataTransfer; var files = dt.files
+				var table="<table border='1' cellpadding='1' cellspacing='1'><thead><tr><th>File Name</th><th>Type</th><th>Size</th></tr></thead><tbody>";
+				for (var i = 0; i < files.length; i++) {
+					var file = files[i];
+					table += "<tr><td>" + file.name + "</td><td>" + file.type + "</td><td>" + file.size + "</td></tr>";
+					//handleFile(file);				 
+				}
+				table +="</tbody></table>";
+				document.getElementById("fileDetails").innerHTML = table;
+			}
+		</script>
+	</head>
+	<body>
+		<h4>Test</h4>
+		<br/>
+		Select Files: <input id="inputFiles" type="file" multiple="" />
+		<br/><br/><input type="button" value="Show Files" onclick="getFiles();" />
+		<div id="fileDetails"></div>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Titan.DataIO", "..\DataIO\DataIO\Titan.DataIO.csproj", "{CD937650-4706-4D57-80A0-AFBC40331585}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Titan.Email", "..\Titan.Email\Titan.Email\Titan.Email.csproj", "{1E06D9A0-A99B-414A-B078-80DB1A2FCD65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Titan.ExcelXml", "..\Titan.ExcelXML\Titan.ExcelXML\Titan.ExcelXml.csproj", "{09716B33-4219-4FB8-9AD4-0CB4EC1B8535}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Apollo", "Apollo", "{11E2EB1F-EB20-40BD-BAE1-F7F2B7AD7ED7}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{CD937650-4706-4D57-80A0-AFBC40331585}|Titan.DataIO.dll;{1E06D9A0-A99B-414A-B078-80DB1A2FCD65}|Titan.Email.dll;{09716B33-4219-4FB8-9AD4-0CB4EC1B8535}|Titan.ExcelXML.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Apollo(1)"
+		Debug.AspNetCompiler.PhysicalPath = "Apollo\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Apollo(1)\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Apollo(1)"
+		Release.AspNetCompiler.PhysicalPath = "Apollo\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Apollo(1)\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "9108"
+		VWDVirtualPath = "/"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://sv-nyc-vsteam/tfs/titan
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\DataIO\\DataIO\\Titan.DataIO.csproj
+		SccProjectName1 = ../Titan.DataIO/Titan.DataIO
+		SccLocalPath1 = ..\\DataIO\\DataIO
+		SccProjectUniqueName2 = ..\\Titan.Email\\Titan.Email\\Titan.Email.csproj
+		SccProjectName2 = ../Titan.Email\u0020Class\u0020Library/Titan.Email/Titan.Email
+		SccLocalPath2 = ..\\Titan.Email\\Titan.Email
+		SccProjectUniqueName3 = ..\\Titan.ExcelXML\\Titan.ExcelXML\\Titan.ExcelXml.csproj
+		SccProjectName3 = ../Titan.ExcelXml\u0020Class\u0020Library/Titan.ExcelXML/Titan.ExcelXML
+		SccLocalPath3 = ..\\Titan.ExcelXML\\Titan.ExcelXML
+		SccWebProject4 = true
+		SccProjectUniqueName4 = Apollo
+		SccProjectName4 = Apollo
+		SccLocalPath4 = Apollo
+		SccProjectEnlistmentChoice4 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Stage|Any CPU = Stage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD937650-4706-4D57-80A0-AFBC40331585}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{CD937650-4706-4D57-80A0-AFBC40331585}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{CD937650-4706-4D57-80A0-AFBC40331585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD937650-4706-4D57-80A0-AFBC40331585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD937650-4706-4D57-80A0-AFBC40331585}.Stage|Any CPU.ActiveCfg = Release|Any CPU
+		{CD937650-4706-4D57-80A0-AFBC40331585}.Stage|Any CPU.Build.0 = Release|Any CPU
+		{1E06D9A0-A99B-414A-B078-80DB1A2FCD65}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{1E06D9A0-A99B-414A-B078-80DB1A2FCD65}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{1E06D9A0-A99B-414A-B078-80DB1A2FCD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E06D9A0-A99B-414A-B078-80DB1A2FCD65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E06D9A0-A99B-414A-B078-80DB1A2FCD65}.Stage|Any CPU.ActiveCfg = Release|Any CPU
+		{1E06D9A0-A99B-414A-B078-80DB1A2FCD65}.Stage|Any CPU.Build.0 = Release|Any CPU
+		{09716B33-4219-4FB8-9AD4-0CB4EC1B8535}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{09716B33-4219-4FB8-9AD4-0CB4EC1B8535}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{09716B33-4219-4FB8-9AD4-0CB4EC1B8535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09716B33-4219-4FB8-9AD4-0CB4EC1B8535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09716B33-4219-4FB8-9AD4-0CB4EC1B8535}.Stage|Any CPU.ActiveCfg = Release|Any CPU
+		{09716B33-4219-4FB8-9AD4-0CB4EC1B8535}.Stage|Any CPU.Build.0 = Release|Any CPU
+		{11E2EB1F-EB20-40BD-BAE1-F7F2B7AD7ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E2EB1F-EB20-40BD-BAE1-F7F2B7AD7ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11E2EB1F-EB20-40BD-BAE1-F7F2B7AD7ED7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E2EB1F-EB20-40BD-BAE1-F7F2B7AD7ED7}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{11E2EB1F-EB20-40BD-BAE1-F7F2B7AD7ED7}.Stage|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E2EB1F-EB20-40BD-BAE1-F7F2B7AD7ED7}.Stage|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

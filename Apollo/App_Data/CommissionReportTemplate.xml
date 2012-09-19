@@ -1,0 +1,1610 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ReportTemplates> 
+  <CommissionTemplates>
+    <AccountingCommission>
+      <ReportStart>
+        <ExpectedValueCount value="0" />
+        <Template><![CDATA[
+          <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+            <head>
+              <meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+              <meta name=ProgId content=Excel.Sheet>
+              <title>Titan 360</title>
+            <style>
+            <!--
+              @page {
+                margin:.75in .75in .75in .75in;
+	              mso-header-margin:.5in;
+	              mso-footer-margin:.5in;
+	              mso-page-orientation:landscape;
+                size: 8.5in 14in;
+              }
+              .style0	{
+                mso-number-format:"\#\,\#\#0_\)\;\[Red\]\\\(\#\,\#\#0\\\)";
+                font-size:8.0pt;
+              }
+            -->
+            </style>
+            <!--[if gte mso 9]><xml>
+             <x:ExcelWorkbook>
+              <x:ExcelWorksheets>
+               <x:ExcelWorksheet>
+                <x:Name>report</x:Name>
+                <x:WorksheetOptions>
+                 <x:FitToPage/>
+                 <x:Print>
+                  <x:FitWidth>1</x:FitWidth>
+                  <x:FitHeight>0</x:FitHeight>
+                  <x:ValidPrinterInfo/>
+                  <x:PaperSizeIndex>5</x:PaperSizeIndex>
+                 </x:Print>
+                 <x:DoNotDisplayGridlines/>
+                 <x:FreezePanes/>
+                 <x:FrozenNoSplit/>
+                 <x:SplitHorizontal>2</x:SplitHorizontal>
+                 <x:TopRowBottomPane>2</x:TopRowBottomPane>
+                 <x:ActivePane>2</x:ActivePane>
+                </x:WorksheetOptions>
+               </x:ExcelWorksheet>
+              </x:ExcelWorksheets>
+             </x:ExcelWorkbook>
+            </xml><![endif]-->
+            <style>
+              body, td, div { font-family:arial, verdana,Helvetica,sans-serif; font-size:8pt}
+              .u { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+              .d { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+              .s { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap; }
+              .ut{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+              .dt{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+              .st{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+              .tt{ padding-left:4px; padding-right:4px; background:#000080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+              .hf { font-size:10pt; padding-left:4px; padding-right:4px;background:#000080; text-align:center;color:#FFF;height:30px}
+              .tt2{ font-size:10pt; background:#797979;font-weight: bold;color:#FFF;vertical-align:middle; white-space: nowrap; }
+              .c { padding-left:4px; padding-right:4px; background:#CCFFCC; white-space: nowrap }
+              .-t {border-collapse: collapse;table-layout:fixed;}
+              .t {border-collapse: collapse;}
+              .h { padding-left:4px; padding-right:4px;background:#000080; text-align:center;color:#FFF;height:60px}
+            </style>
+          </head>
+          <body>]]>
+        </Template>
+      </ReportStart>
+      <ReportHeaders>
+        <ExpectedValueCount value="2" />      
+        <Template>
+                <![CDATA[
+            <table class=t CELLPADDING=0 CELLSPACING=0 border=1 bordercolor=#CCCCCC>
+             <tr><th colspan=42 class="hf" align="center">Accounting Commission Summary</th></tr>
+             <tr><th class=h style="width:120px"> AE                          </th>
+              <th class=h style="width:150px"> Advertiser                  </th>
+              <th class=h style="width:80px "> Advertiser ID               </th>
+              <th class=h style="width:150px"> Agency                      </th>
+              <th class=h style="width:180px"> Program                     </th>
+              <th class=h style="width:100px"> Profit Center               </th>
+              <th class=h style="width:70px "> Contract #                  </th>
+              <th class=h style="width:50px "> Line Number                 </th>
+              <th class=h style="width:70px "> Bill Start Date             </th>
+              <th class=h style="width:70px "> Contract Entry Date         </th>
+              <th class=h style="width:70px "> Contract Line Start Date    </th>
+              <th class=h style="width:70px "> Contract Line End Date      </th>
+              <th class=h style="width:50px "> National Or Local           </th>
+              <th class=h style="width:50px "> Multi-Market                </th>
+              <th class=h style="width:80px "> Total {0}                   </th>
+              <th class=h style="width:80px "> Total {1}                   </th>
+              <th class=h style="width:80px "> YearToDate {1}              </th>
+              <th class=h style="width:60px "> New Or Renewal              </th>
+              <th class=h style="width:50px "> Number Of AE                </th>
+              <th class=h style="width:80px "> Package                     </th>
+              <th class=h style="width:50px "> Split %                     </th>
+              <th class=h style="width:90px "> Split Amount                </th>
+              <th class=h style="width:90px "> Renew Amount                </th>
+              <th class=h style="width:90px "> New Amount                  </th>
+              <th class=h style="width:40px ">  % New                      </th>
+              <th class=h style="width:60px ">  % Renewal                  </th>
+              <th class=h style="width:90px "> January Commission          </th>
+              <th class=h style="width:90px "> February Commission         </th>
+              <th class=h style="width:90px "> March Commission            </th>
+              <th class=h style="width:90px "> April Commission            </th>
+              <th class=h style="width:90px "> May Commission              </th>
+              <th class=h style="width:90px "> June Commission             </th>
+              <th class=h style="width:90px "> July Commission             </th>
+              <th class=h style="width:90px "> August Commission           </th>
+              <th class=h style="width:90px "> September Commission        </th>              
+              <th class=h style="width:90px "> October Commission          </th>
+              <th class=h style="width:90px "> November Commission         </th>
+              <th class=h style="width:90px "> December Commission         </th>
+              <th class=h style="width:90px "> Commission Amount           </th>
+              <th class=h style="width:90px "> Commission Contract Total   </th>
+              <th class=h style="width:90px "> ContractLine BillAmount     </th>        
+              <th class=h style="width:80px "> AE Commission %             </th></tr>]]>
+        </Template>      
+      </ReportHeaders>
+      <ReportRow>
+        <ExpectedValueCount value="42" />      
+        <Template>
+          <![CDATA[
+            <tr><td class=s align=left  >{0}</td>
+              <td class=s align=left  >{1}</td><td class=s align=left  >{2}</td>
+              <td class=s align=left  >{3}</td><td class=s align=left  >{4}</td>
+              <td class=s align=left  >{5}</td><td class=s align=right >{6}</td>
+              <td class=s align=right >{7}</td><td class=d align=center>{8}</td>
+              <td class=d align=center>{9}</td><td class=d align=center>{10}</td>
+              <td class=d align=center>{11}</td><td class=s align=center>{12}</td>
+              <td class=s align=center>{13}</td><td class=u align=right >{14}</td>
+              <td class=u align=right >{15}</td><td class=u align=right >{16}</td>
+              <td class=s align=center>{17}</td><td class=s align=center>{18}</td>
+              <td class=s align=center>{19}</td><td class=u align=right >{20}</td>
+              <td class=u align=right >{21}</td><td class=u align=right >{22}</td>
+              <td class=u align=right >{23}</td><td class=u align=right >{24}</td>
+              <td class=u align=right >{25}</td><td class=u align=right >{26}</td>
+              <td class=u align=right >{27}</td><td class=u align=right >{28}</td>
+              <td class=u align=right >{29}</td><td class=u align=right >{30}</td>
+              <td class=u align=right >{31}</td><td class=u align=right >{32}</td>
+              <td class=u align=right >{33}</td><td class=u align=right >{34}</td>
+              <td class=u align=right >{35}</td><td class=u align=right >{36}</td>
+              <td class=u align=right >{37}</td><td class=u align=right >{38}</td>
+              <td class=u align=right >{39}</td><td class=u align=right >{40}</td>
+              <td class=u align=right >{41}</td></tr>]]>
+        </Template>
+      </ReportRow>
+      <ReportTotalRow>
+        <ExpectedValueCount value="16" />      
+        <Template>
+          <![CDATA[
+            <tr><td class=tt align=right colspan=20 ><b>Total:&nbsp;</b></td>
+              <td class=ut align=right ><b>&nbsp;</b></td><td class=ut align=right ><b>{0}</b></td>
+              <td class=ut align=right ><b>{1}</b></td><td class=ut align=right ><b>{2}</b></td>
+              <td class=ut align=right ><b>&nbsp;</b></td><td class=ut align=right ><b>&nbsp;</b></td>
+              <td class=ut align=right ><b>{3}</b></td><td class=ut align=right ><b>{4}</b></td>
+              <td class=ut align=right ><b>{5}</b></td><td class=ut align=right ><b>{6}</b></td>
+              <td class=ut align=right ><b>{7}</b></td><td class=ut align=right ><b>{8}</b></td>
+              <td class=ut align=right ><b>{9}</b></td><td class=ut align=right ><b>{10}</b></td>
+              <td class=ut align=right ><b>{11}</b></td><td class=ut align=right ><b>{12}</b></td>
+              <td class=ut align=right ><b>{13}</b></td><td class=ut align=right ><b>{14}</b></td>
+              <td class=ut align=right ><b>{15}</b></td><td class=ut align=right ><b>&nbsp;</b></td>
+              <td class=ut align=right ><b>&nbsp;</b></td><td class=ut align=right ><b>&nbsp;</b></td>        
+             </tr>]]>
+        </Template>
+      </ReportTotalRow>
+      <ReportEnd>
+        <ExpectedValueCount value="0" />
+        <Template><![CDATA[</table></body></html>]]></Template>
+      </ReportEnd>
+    </AccountingCommission>
+    <AccountingCommissionByAE>
+      <ReportStart>
+        <ExpectedValueCount value="0" />      
+        <Template><![CDATA[
+          <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+            <head>
+              <meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+              <meta name=ProgId content=Excel.Sheet>
+              <title>Titan 360</title>
+            <style>
+            <!--
+              @page {
+                margin:.75in .75in .75in .75in;
+	              mso-header-margin:.5in;
+	              mso-footer-margin:.5in;
+	              mso-page-orientation:landscape;
+                size: 8.5in 14in;
+              }
+              .style0	{
+                mso-number-format:"\#\,\#\#0_\)\;\[Red\]\\\(\#\,\#\#0\\\)";
+                font-size:8.0pt;
+              }
+            -->
+            </style>
+            <!--[if gte mso 9]><xml>
+             <x:ExcelWorkbook>
+              <x:ExcelWorksheets>
+               <x:ExcelWorksheet>
+                <x:Name>report</x:Name>
+                <x:WorksheetOptions>
+                 <x:FitToPage/>
+                 <x:Print>
+                  <x:FitWidth>1</x:FitWidth>
+                  <x:FitHeight>0</x:FitHeight>
+                  <x:ValidPrinterInfo/>
+                  <x:PaperSizeIndex>5</x:PaperSizeIndex>
+                 </x:Print>
+                 <x:DoNotDisplayGridlines/>
+                 <x:FreezePanes/>
+                 <x:FrozenNoSplit/>
+                 <x:SplitHorizontal>2</x:SplitHorizontal>
+                 <x:TopRowBottomPane>2</x:TopRowBottomPane>
+                 <x:ActivePane>2</x:ActivePane>
+                </x:WorksheetOptions>
+               </x:ExcelWorksheet>
+              </x:ExcelWorksheets>
+             </x:ExcelWorkbook>
+            </xml><![endif]-->
+            <style>
+              body, td, div { font-family:arial, verdana,Helvetica,sans-serif; font-size:8pt}
+              .u { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+              .d { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+              .s { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap; }
+              .ut{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+              .dt{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+              .st{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+              .tt{ padding-left:4px; padding-right:4px; background:#000080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+              .hf { font-size:10pt; padding-left:4px; padding-right:4px;background:#000080; text-align:center;color:#FFF;height:30px}
+              .tt2{ font-size:10pt; background:#797979;font-weight: bold;color:#FFF;vertical-align:middle; white-space: nowrap; }
+              .c { padding-left:4px; padding-right:4px; background:#CCFFCC; white-space: nowrap }
+              .-t {border-collapse: collapse;table-layout:fixed;}
+              .t {border-collapse: collapse;}
+              .h { padding-left:4px; padding-right:4px;background:#000080; text-align:center;color:#FFF;height:60px}
+            </style>
+          </head>
+          <body>]]>
+        </Template>
+      </ReportStart>
+      <ReportHeaders>
+        <ExpectedValueCount value="3" />      
+        <Template>
+                <![CDATA[
+            <table class=t CELLPADDING=0 CELLSPACING=0 border=1 bordercolor=#CCCCCC>
+             <tr>
+              <th class=hf colspan=41 align="center">AE Accounting Commission ({0}, {1})</th>
+             </tr>
+             <tr>
+              <th class=h style="width:150px"> Advertiser                  </th>
+              <th class=h style="width:80px "> Advertiser ID               </th>
+              <th class=h style="width:150px"> Agency                      </th>
+              <th class=h style="width:180px"> Program                     </th>
+              <th class=h style="width:100px"> Profit Center               </th>
+              <th class=h style="width:70px "> Contract #                  </th>
+              <th class=h style="width:50px "> Line Number                 </th>
+              <th class=h style="width:70px "> Bill Start Date             </th>
+              <th class=h style="width:70px "> Contract Entry Date         </th>
+              <th class=h style="width:70px "> Contract Line Start Date    </th>
+              <th class=h style="width:70px "> Contract Line End Date      </th>
+              <th class=h style="width:50px "> National Or Local           </th>
+              <th class=h style="width:50px "> Multi-Market                </th>
+              <th class=h style="width:80px "> Total {2}                   </th>
+              <th class=h style="width:80px "> Total {1}                   </th>
+              <th class=h style="width:80px "> YearToDate {1}              </th>
+              <th class=h style="width:60px "> New Or Renewal              </th>
+              <th class=h style="width:50px "> Number Of AE                </th>
+              <th class=h style="width:80px "> Package                     </th>
+              <th class=h style="width:50px "> Split %                     </th>
+              <th class=h style="width:90px "> Split Amount                </th>
+              <th class=h style="width:90px "> Renew Amount                </th>
+              <th class=h style="width:90px "> New Amount                  </th>
+              <th class=h style="width:40px ">  % New                      </th>
+              <th class=h style="width:60px ">  % Renewal                  </th>
+              <th class=h style="width:90px "> January Commission          </th>
+              <th class=h style="width:90px "> Febraury Commission         </th>
+              <th class=h style="width:90px "> March Commission            </th>
+              <th class=h style="width:90px "> April Commission            </th>
+              <th class=h style="width:90px "> May Commission              </th>
+              <th class=h style="width:90px "> June Commission             </th>
+              <th class=h style="width:90px "> July Commission             </th>
+              <th class=h style="width:90px "> August Commission           </th>
+              <th class=h style="width:90px "> September Commission        </th>              
+              <th class=h style="width:90px "> October Commission          </th>
+              <th class=h style="width:90px "> November Commission         </th>
+              <th class=h style="width:90px "> December Commission         </th>
+              <th class=h style="width:90px "> Commission Amount           </th>
+              <th class=h style="width:90px "> Commission Contract Total   </th>
+              <th class=h style="width:90px "> ContractLine BillAmount     </th>          
+              <th class=h style="width:80px "> AE Commission %             </th>
+             </tr>]]>
+        </Template>      
+      </ReportHeaders>
+      <ReportRow>
+        <ExpectedValueCount value="41" />      
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=s align=left  >{0}</td>
+              <td class=s align=left  >{1}</td>
+              <td class=s align=left  >{2}</td>
+              <td class=s align=left  >{3}</td>
+              <td class=s align=left  >{4}</td>
+              <td class=s align=right >{5}</td>
+              <td class=s align=right >{6}</td>
+              <td class=d align=center>{7}</td>
+              <td class=d align=center>{8}</td>
+              <td class=d align=center>{9}</td>
+              <td class=d align=center>{10}</td>
+              <td class=s align=center>{11}</td>
+              <td class=s align=center>{12}</td>
+              <td class=u align=right >{13}</td>
+              <td class=u align=right >{14}</td>
+              <td class=u align=right >{15}</td>
+              <td class=s align=center>{16}</td>
+              <td class=s align=center>{17}</td>
+              <td class=s align=center>{18}</td>
+              <td class=u align=right >{19}</td>
+              <td class=u align=right >{20}</td>
+              <td class=u align=right >{21}</td>
+              <td class=u align=right >{22}</td>
+              <td class=u align=right >{23}</td>
+              <td class=u align=right >{24}</td>
+              <td class=u align=right >{25}</td>
+              <td class=u align=right >{26}</td>
+              <td class=u align=right >{27}</td>
+              <td class=u align=right >{28}</td>
+              <td class=u align=right >{29}</td>
+              <td class=u align=right >{30}</td>
+              <td class=u align=right >{31}</td>
+              <td class=u align=right >{32}</td>
+              <td class=u align=right >{33}</td>
+              <td class=u align=right >{34}</td>
+              <td class=u align=right >{35}</td>
+              <td class=u align=right >{36}</td>
+              <td class=u align=right >{37}</td>
+              <td class=u align=right >{38}</td>
+              <td class=u align=right >{39}</td>
+              <td class=u align=right >{40}</td>
+             </tr>]]>
+        </Template>
+      </ReportRow>
+      <ReportTotalRow>
+        <ExpectedValueCount value="16" />      
+        <Template>
+                <![CDATA[
+            <tr>
+              <td class=tt align=right colspan=19 ><b>Total:&nbsp;</b></td>
+              <td class=ut align=right ><b>&nbsp;</b></td>
+              <td class=ut align=right ><b>{0}</b></td>
+              <td class=ut align=right ><b>{1}</b></td>
+              <td class=ut align=right ><b>{2}</b></td>
+              <td class=ut align=right ><b>&nbsp;</b></td>
+              <td class=ut align=right ><b>&nbsp;</b></td>
+              <td class=ut align=right ><b>{3}</b></td>
+              <td class=ut align=right ><b>{4}</b></td>
+              <td class=ut align=right ><b>{5}</b></td>
+              <td class=ut align=right ><b>{6}</b></td>
+              <td class=ut align=right ><b>{7}</b></td>
+              <td class=ut align=right ><b>{8}</b></td>
+              <td class=ut align=right ><b>{9}</b></td>
+              <td class=ut align=right ><b>{10}</b></td>
+              <td class=ut align=right ><b>{11}</b></td>
+              <td class=ut align=right ><b>{12}</b></td>
+              <td class=ut align=right ><b>{13}</b></td>
+              <td class=ut align=right ><b>{14}</b></td>
+              <td class=ut align=right ><b>{15}</b></td>  
+              <td class=ut align=right ><b>&nbsp;</b></td>
+              <td class=ut align=right ><b>&nbsp;</b></td>
+              <td class=ut align=right ><b>&nbsp;</b></td>         
+            </tr>]]>
+        </Template>
+      </ReportTotalRow>
+      <ReportEnd>
+        <ExpectedValueCount value="0" />
+        <Template><![CDATA[
+              </table>
+            </body>
+          </html>]]>
+        </Template>
+      </ReportEnd>
+    </AccountingCommissionByAE>
+    <CommissionAnalysis>
+      <ReportStart>
+        <ExpectedValueCount value="0" />
+        <Template>
+          <![CDATA[
+          <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+            <head>
+              <meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+              <meta name=ProgId content=Excel.Sheet>
+              <title>Titan 360</title>
+            <style>
+            <!--
+              @page {
+                margin:.75in .75in .75in .75in;
+	              mso-header-margin:.5in;
+	              mso-footer-margin:.5in;
+	              mso-page-orientation:landscape;
+                size: 8.5in 14in;
+              }
+              .style0	{
+                mso-number-format:"\#\,\#\#0_\)\;\[Red\]\\\(\#\,\#\#0\\\)";
+                font-size:8.0pt;
+              }
+            -->
+            </style>
+            <!--[if gte mso 9]><xml>
+             <x:ExcelWorkbook>
+              <x:ExcelWorksheets>
+               <x:ExcelWorksheet>
+                <x:Name>report</x:Name>
+                <x:WorksheetOptions>
+                 <x:FitToPage/>
+                 <x:Print>
+                  <x:FitWidth>1</x:FitWidth>
+                  <x:FitHeight>0</x:FitHeight>
+                  <x:ValidPrinterInfo/>
+                  <x:PaperSizeIndex>5</x:PaperSizeIndex>
+                 </x:Print>
+                 <x:DoNotDisplayGridlines/>
+                 <x:FreezePanes/>
+                 <x:FrozenNoSplit/>
+                 <x:SplitHorizontal>3</x:SplitHorizontal>
+                 <x:TopRowBottomPane>3</x:TopRowBottomPane>
+                 <x:ActivePane>2</x:ActivePane>
+                </x:WorksheetOptions>
+               </x:ExcelWorksheet>
+              </x:ExcelWorksheets>
+             </x:ExcelWorkbook>
+            </xml><![endif]-->
+            <style>
+              body, td, div { font-family:arial, verdana,Helvetica,sans-serif; font-size:8pt}
+              .u { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+              .d { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+              .s { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap; }
+              .ut{ padding-left:4px; padding-right:4px; background:#00CCFF;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+              .dt{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+              .st{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+              .tt{ padding-left:4px; padding-right:4px; background:#00CCFF;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+              .hf { font-size:10pt; padding-left:4px; padding-right:4px;background:#00CCFF; text-align:center;color:#FFF;height:30px}
+              .tt2{ font-size:10pt; background:#797979;font-weight: bold;color:#FFF;vertical-align:middle; white-space: nowrap; }
+              .c { padding-left:4px; padding-right:4px; background:#CCFFCC; white-space: nowrap }
+              .-t {border-collapse: collapse;table-layout:fixed;}
+              .t {border-collapse: collapse;}
+              .h { padding-left:4px; padding-right:4px;background:#00CCFF; text-align:center;color:#FFF;height:60px}
+            </style>
+          </head>
+          <body>]]>
+        </Template>
+      </ReportStart>
+      <ReportHeaders>
+        <ExpectedValueCount value="3" />
+        <Template>
+          <![CDATA[
+            <table class=t CELLPADDING=0 CELLSPACING=0 border=1 bordercolor=#CCCCCC>
+             <tr><th colspan=17 class="hf" align="center">Commission Analysis</th></tr>
+             <tr><th colspan=3 class="hf">&nbsp;</th><th colspan=4 class="hf">As of {0}</th>
+              <th colspan=4 class="hf">Full Year As of {0}</th><th class="hf">Updated Full Year As of {0}</th>
+              <th colspan=5 class="hf">{1} Projected Finish</th></tr>
+             <tr><th class=h style="width:120px"> AE                       </th>
+              <th class=h style="width:80px "> Start Date                  </th>
+              <th class=h style="width:80px "> Market                      </th>
+              <th class=h style="width:90px "> Billings                    </th>
+              <th class=h style="width:90px "> Commissions                 </th>
+              <th class=h style="width:90px "> Draw                        </th>
+              <th class=h style="width:90px "> Over/(Under Draw)           </th>              
+              <th class=h style="width:90px "> Billings                    </th>
+              <th class=h style="width:90px "> Commissions                 </th>
+              <th class=h style="width:90px "> Draw                        </th>
+              <th class=h style="width:90px "> Over/(Under Draw)           </th>
+              <th class=h style="width:90px "> Billings                    </th>
+              <th class=h style="width:90px "> Billings                    </th>
+              <th class=h style="width:90px "> Commissions                 </th>
+              <th class=h style="width:90px "> Draw                        </th>
+              <th class=h style="width:90px "> Over/(Under Draw)           </th>
+              <th class=h style="width:100px"> {2} Final Total Commissions </th></tr>]]>
+        </Template>
+      </ReportHeaders>
+      <ReportRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr><td class=s align=left  >{0}</td>
+              <td class=d align=left  >{1}</td><td class=s align=left  >{2}</td>
+              <td class=u align=right >{3}</td><td class=u align=right >{4}</td>
+              <td class=u align=right >{5}</td><td class=u align=right >{6}</td>
+              <td class=u align=right >{7}</td><td class=u align=right >{8}</td>
+              <td class=u align=right >{5}</td><td class=u align=right >{9}</td>
+              <td class=u align=right >{10}</td><td class=u align=right >{10}</td>
+              <td class=u align=right >{11}</td><td class=u align=right >{5}</td>          
+              <td class=u align=right >{12}</td><td class=u align=right >&nbsp;</td></tr>]]>
+        </Template>
+      </ReportRow>
+      <ReportTotalRow>
+        <ExpectedValueCount value="10" />
+        <Template>
+          <![CDATA[
+            <tr><td class=tt align=right colspan=3 ><b>Total:&nbsp;</b></td>
+              <td class=ut align=right ><b>{0}</b></td><td class=ut align=right ><b>{1}</b></td>
+              <td class=ut align=right ><b>{2}</b></td><td class=ut align=right ><b>{3}</b></td>
+              <td class=ut align=right ><b>{4}</b></td><td class=ut align=right ><b>{5}</b></td>
+              <td class=ut align=right ><b>{2}</b></td><td class=ut align=right ><b>{6}</b></td>
+              <td class=ut align=right ><b>{7}</b></td><td class=ut align=right ><b>{7}</b></td>
+              <td class=ut align=right ><b>{8}</b></td><td class=ut align=right ><b>{2}</b></td>
+              <td class=ut align=right ><b>{9}</b></td><td class=ut align=right ><b>&nbsp;</b></td>       
+             </tr>]]>
+        </Template>
+      </ReportTotalRow>
+      <TotalUnderDrawRow>
+        <ExpectedValueCount value="1" />
+        <Template>
+          <![CDATA[
+            <tr><td colspan=17>&nbsp;</td></tr>
+            <tr><td colspan=12>&nbsp;</td><td class=tt align=right colspan=3><b>Total of Those Under Draw</b></td><td class=ut align=right><b>{0}</b></td></tr>            
+          ]]>
+        </Template>
+      </TotalUnderDrawRow>
+      <ReportEnd>
+        <ExpectedValueCount value="0" />
+        <Template><![CDATA[</table></body></html>]]></Template>
+      </ReportEnd>
+    </CommissionAnalysis>
+    <AECommissionByMarket>
+      <ReportStart>
+        <ExpectedValueCount value="0" />
+        <Template>
+          <![CDATA[
+          <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+            <head>
+              <meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+              <meta name=ProgId content=Excel.Sheet>
+              <title>Titan 360</title>
+            <style>
+            <!--
+              @page {
+                margin:.75in .75in .75in .75in;
+	              mso-header-margin:.5in;
+	              mso-footer-margin:.5in;
+	              mso-page-orientation:landscape;
+                size: 8.5in 14in;
+              }
+              .style0	{
+                mso-number-format:"\#\,\#\#0_\)\;\[Red\]\\\(\#\,\#\#0\\\)";
+                font-size:8.0pt;
+              }
+            -->
+            </style>
+            <!--[if gte mso 9]><xml>
+             <x:ExcelWorkbook>
+              <x:ExcelWorksheets>
+               <x:ExcelWorksheet>
+                <x:Name>report</x:Name>
+                <x:WorksheetOptions>
+                 <x:FitToPage/>
+                 <x:Print>
+                  <x:FitWidth>1</x:FitWidth>
+                  <x:FitHeight>0</x:FitHeight>
+                  <x:ValidPrinterInfo/>
+                  <x:PaperSizeIndex>5</x:PaperSizeIndex>
+                 </x:Print>
+                 <x:DoNotDisplayGridlines/>
+                 <x:FreezePanes/>
+                 <x:FrozenNoSplit/>
+                 <x:SplitHorizontal>2</x:SplitHorizontal>
+                 <x:TopRowBottomPane>2</x:TopRowBottomPane>
+                 <x:ActivePane>2</x:ActivePane>
+                </x:WorksheetOptions>
+               </x:ExcelWorksheet>
+              </x:ExcelWorksheets>
+             </x:ExcelWorkbook>
+            </xml><![endif]-->
+            <style>
+              body, td, div { font-family:arial, verdana,Helvetica,sans-serif; font-size:8pt}
+              .u { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+              .d { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+              .s { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap; }
+              .ut{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+              .dt{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+              .st{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+              .tt{ padding-left:4px; padding-right:4px; background:#000080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+              .hf { font-size:10pt; padding-left:4px; padding-right:4px;background:#00CCFF; text-align:center;color:#FFF;height:30px}
+              .tt2{ font-size:10pt; background:#797979;font-weight: bold;color:#FFF;vertical-align:middle; white-space: nowrap; }
+              .c { padding-left:4px; padding-right:4px; background:#CCFFCC; white-space: nowrap }
+              .-t {border-collapse: collapse;table-layout:fixed;}
+              .t {border-collapse: collapse;}
+              .h { padding-left:4px; padding-right:4px;background:#00CCFF; text-align:center;color:#FFF;height:60px}
+            </style>
+          </head>
+          <body>]]>
+        </Template>
+      </ReportStart>
+      <ReportHeaders>
+        <ExpectedValueCount value="1" />
+        <Template>
+          <![CDATA[
+            <table class=t CELLPADDING=0 CELLSPACING=0 border=1 bordercolor=#CCCCCC>
+             <tr><th colspan=16 class="hf" align="center">{0} - AE Commission by Market</th></tr>             
+             <tr><th class=h style="width:120px"> AE                       </th>              
+              <th class=h style="width:80px "> Market                      </th>
+              <th class=h style="width:80px "> Profit Center               </th>
+              <th class=h style="width:90px "> January                     </th>
+              <th class=h style="width:90px "> February                    </th>
+              <th class=h style="width:90px "> March                       </th>
+              <th class=h style="width:90px "> April                       </th>              
+              <th class=h style="width:90px "> May                         </th>
+              <th class=h style="width:90px "> June                        </th>
+              <th class=h style="width:90px "> July                        </th>
+              <th class=h style="width:90px "> August                      </th>
+              <th class=h style="width:90px "> September                   </th>
+              <th class=h style="width:90px "> October                     </th>
+              <th class=h style="width:90px "> November                    </th>
+              <th class=h style="width:90px "> December                    </th>
+              <th class=h style="width:90px "> {0} - Total                 </th></tr>]]>              
+        </Template>
+      </ReportHeaders>
+      <ReportRow>
+        <ExpectedValueCount value="16" />
+        <Template>
+          <![CDATA[
+            <tr><td class=s align=left  >{0}</td><td class=s align=left  >{1}</td>
+              <td class=s align=left  >{2}</td><td class=u align=right >{3}</td>
+              <td class=u align=right >{4}</td><td class=u align=right >{5}</td>
+              <td class=u align=right >{6}</td><td class=u align=right >{7}</td>
+              <td class=u align=right >{8}</td><td class=u align=right >{9}</td>
+              <td class=u align=right >{10}</td><td class=u align=right >{11}</td>
+              <td class=u align=right >{12}</td><td class=u align=right >{13}</td>
+              <td class=u align=right >{14}</td><td class=u align=right >{15}</td></tr>]]>
+        </Template>
+      </ReportRow>
+      <ReportTotalRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr><td class=tt align=right colspan=3 ><b>Total:&nbsp;</b></td>
+              <td class=ut align=right ><b>{0}</b></td><td class=ut align=right ><b>{1}</b></td>
+              <td class=ut align=right ><b>{2}</b></td><td class=ut align=right ><b>{3}</b></td>
+              <td class=ut align=right ><b>{4}</b></td><td class=ut align=right ><b>{5}</b></td>
+              <td class=ut align=right ><b>{6}</b></td><td class=ut align=right ><b>{7}</b></td>
+              <td class=ut align=right ><b>{8}</b></td><td class=ut align=right ><b>{9}</b></td>
+              <td class=ut align=right ><b>{10}</b></td><td class=ut align=right ><b>{11}</b></td>
+              <td class=ut align=right ><b>{12}</b></td>
+             </tr>]]>
+        </Template>
+      </ReportTotalRow>
+      <ReportEnd>
+        <ExpectedValueCount value="0" />
+        <Template><![CDATA[</table></body></html>]]></Template>
+      </ReportEnd>
+    </AECommissionByMarket>
+    <FlashReport>
+      <ReportStart>
+        <ExpectedValueCount value="0" />      
+        <Template><![CDATA[
+            <html xmlns:o="urn:schemas-microsoft-com:office:office"
+              xmlns:x="urn:schemas-microsoft-com:office:excel"
+              xmlns="http://www.w3.org/TR/REC-html40">
+              <head>
+                <meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+                <meta name=ProgId content=Excel.Sheet>
+                <title>Titan 360</title>
+                <style>
+                <!--
+                @page {
+                  margin:.75in .75in .75in .75in;
+	                mso-header-margin:.5in;
+	                mso-footer-margin:.5in;
+	                mso-page-orientation:landscape;
+                  size: 8.5in 14in;
+                }
+                .style0	{
+                  mso-number-format:"\#\,\#\#0_\)\;\[Red\]\\\(\#\,\#\#0\\\)";
+                  font-size:8.0pt;
+                }
+                -->
+                </style>
+                <!--[if gte mso 9]><xml>
+                 <x:ExcelWorkbook>
+                  <x:ExcelWorksheets>
+                   <x:ExcelWorksheet>
+                    <x:Name>report</x:Name>
+                    <x:WorksheetOptions>
+                     <x:FitToPage/>
+                     <x:Print>
+                      <x:FitWidth>1</x:FitWidth>
+                      <x:FitHeight>0</x:FitHeight>
+                      <x:ValidPrinterInfo/>
+                      <x:PaperSizeIndex>5</x:PaperSizeIndex>
+                     </x:Print>
+                     <x:DoNotDisplayGridlines/>
+                     <x:FreezePanes/>
+                     <x:FrozenNoSplit/>
+                     <x:SplitHorizontal>2</x:SplitHorizontal>
+                     <x:TopRowBottomPane>2</x:TopRowBottomPane>
+                     <x:SplitVertical>1</x:SplitVertical>
+                     <x:LeftColumnRightPane>1</x:LeftColumnRightPane>
+                     <x:ActivePane>2</x:ActivePane>
+                    </x:WorksheetOptions>
+                   </x:ExcelWorksheet>
+                  </x:ExcelWorksheets>
+                 </x:ExcelWorkbook>
+                </xml><![endif]-->
+                <style>
+                  body, td, div { font-family:arial, verdana,Helvetica,sans-serif; font-size:8pt}
+                  .u { padding-left:4px; padding-right:4px; background:#FFFFFF; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .u1 { padding-left:4px; padding-right:4px; background:#FFFFFF; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .u2 { padding-left:4px; padding-right:4px; background:#C5C5C5; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .d { padding-left:4px; padding-right:4px; background:#FFFFFF; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+                  .sc { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap; }
+                  .s { padding-left:4px; padding-right:4px; background:#FFFFFF; white-space: nowrap; }
+                  .sb { padding-left:10px; background:#FFFFFF; white-space: nowrap;height:20px;vertical-align:middle }
+                  .ut{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .dt{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+                  .st{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+                  .tt{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+                  .gtt{ padding-left:4px; padding-right:4px; background:#2085D6;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+                  .gut{ padding-left:4px; padding-right:4px; background:#2085D6;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .cut{ padding-left:4px; padding-right:4px; background:#FFFFDF;color:#000;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .drw{ font-size:18pt;padding-left:4px; padding-right:4px; background:#2085D6;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+                  .c { padding-left:4px; padding-right:4px; background:#CCFFCC; white-space: nowrap }
+                  .-t {border-collapse: collapse;table-layout:fixed;}
+                  .t {border-collapse: collapse;}
+                  .h { padding-left:4px; padding-right:4px;background:#000080; text-align:center;color:#FFF;height:30px}
+                  .hn { font-size:12pt; padding-left:4px; padding-right:4px;background:#008080; text-align:center;color:#FFF;height:30px}
+                  .hc { padding-left:4px; padding-right:4px;background:#2085D6; text-align:center;color:#FFF;height:30px}
+                  .hf { font-size:10pt; padding-left:4px; padding-right:4px;background:#000080; text-align:center;color:#FFF;height:30px}
+                  .ct { font-size:10pt; padding-left:4px; padding-right:4px;background:#2085D6; text-align:center;color:#FFF;height:30px}
+                  .uc { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .e {height:50px}
+                  .hidden {display:none}
+                </style>
+              </head>
+              <body>]]>
+        </Template>      
+      </ReportStart>
+      <ReportHeaders>
+        <ExpectedValueCount value="4" />      
+        <Template><![CDATA[
+            <table class=t CELLPADDING=0 CELLSPACING=0 border=1 bordercolor=#CCCCCC>
+              <tr>
+                <th class=hn colspan=7 >{0} - {1} as of {2}  </th>
+                <th class=hf colspan=14> Flash AE Monthly Totals                 </th>
+                <th class=ct colspan=2 > Commission                              </th>
+              </tr>
+              <tr>
+                <th class=h style="width:140px"> Advertiser       </th>
+                <th class=h style="width:70px "> Contract #       </th>
+                <th class=h style="width:100px"> Profit Center    </th>
+                <th class=h style="width:140px"> Agency           </th>
+                <th class=h style="width:50px "> N/L              </th>
+                <th class=h style="width:140px "> Program         </th>
+                <th class=h style="width:50px "> AE's             </th>
+                <th class=h style="width:80px "> Jan </th>
+                <th class=h style="width:80px "> Feb </th>
+                <th class=h style="width:80px "> Mar </th>
+                <th class=h style="width:80px "> Apr </th>
+                <th class=h style="width:80px "> May </th>
+                <th class=h style="width:80px "> Jun </th>
+                <th class=h style="width:80px "> Jul </th>
+                <th class=h style="width:80px "> Aug </th>
+                <th class=h style="width:80px "> Sep </th>
+                <th class=h style="width:80px "> Oct </th>
+                <th class=h style="width:80px "> Nov </th>
+                <th class=h style="width:80px "> Dec </th>
+                <th class=h style="width:80px "> Total AE Amount </th>
+                <th class=h style="width:80px "> Total Billing Amount </th>
+                <th class=hc style="width:70px "> $  </th>
+                <th class=hc style="width:50px "> %  </th>
+              </tr>]]>
+        </Template>      
+      </ReportHeaders>
+      <ReportRow>
+        <ExpectedValueCount value="23" />      
+        <Template><![CDATA[
+            <tr>
+              <td class=sc align=left  >{0}</td>
+              <td class=sc align=center>{1}</td>
+              <td class=sc align=left  >{2}</td>
+              <td class=sc align=left  >{3}</td>
+              <td class=sc align=center>{4}</td>
+              <td class=sc align=left  >{5}</td>
+              <td class=sc align=center>{6}</td>
+              <td class=u align=right>{7}</td>
+              <td class=u align=right>{8}</td>
+              <td class=u align=right>{9}</td>
+              <td class=u align=right>{10}</td>
+              <td class=u align=right>{11}</td>
+              <td class=u align=right>{12}</td>
+              <td class=u align=right>{13}</td>
+              <td class=u align=right>{14}</td>
+              <td class=u align=right>{15}</td>
+              <td class=u align=right>{16}</td>
+              <td class=u align=right>{17}</td>
+              <td class=u align=right>{18}</td>
+              <td class=u align=right>{19}</td>
+              <td class=u align=right>{20}</td>
+              <td class=uc align=right>{21}</td>
+              <td class=uc align=right>{22}</td>
+            </tr>]]>
+        </Template>      
+      </ReportRow>
+      <CommissionSummaryRowPre2010>
+        <ExpectedValueCount value="16" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=drw align=center rowspan=4 colspan=4><b>Commission Summary</b></td>
+              <td class=gtt align=right colspan=3><b>GRAND TOTAL: </b></td>
+              <td class=gut align=right><b>{0}</b></td>
+              <td class=gut align=right><b>{1}</b></td>
+              <td class=gut align=right><b>{2}</b></td>
+              <td class=gut align=right><b>{3}</b></td>
+              <td class=gut align=right><b>{4}</b></td>
+              <td class=gut align=right><b>{5}</b></td>
+              <td class=gut align=right><b>{6}</b></td>
+              <td class=gut align=right><b>{7}</b></td>
+              <td class=gut align=right><b>{8}</b></td>
+              <td class=gut align=right><b>{9}</b></td>
+              <td class=gut align=right><b>{10}</b></td>
+              <td class=gut align=right><b>{11}</b></td>
+              <td class=gut align=right><b>{12}</b></td>
+              <td class=gut align=right><b>{13}</b></td>
+              <td class=gut align=right><b>{14}</b></td>
+              <td class=gut align=right><b>{15}</b></td>
+            </tr>]]>
+        </Template>
+      </CommissionSummaryRowPre2010>      
+      <CommissionSummaryRow>
+        <ExpectedValueCount value="16" />      
+        <Template><![CDATA[
+            <tr>
+              <td class=drw align=center rowspan=5 colspan=4><b>Commission Summary</b></td>
+              <td class=gtt align=right colspan=3><b>GRAND TOTAL: </b></td>
+              <td class=gut align=right><b>{0}</b></td>
+              <td class=gut align=right><b>{1}</b></td>
+              <td class=gut align=right><b>{2}</b></td>
+              <td class=gut align=right><b>{3}</b></td>
+              <td class=gut align=right><b>{4}</b></td>
+              <td class=gut align=right><b>{5}</b></td>
+              <td class=gut align=right><b>{6}</b></td>
+              <td class=gut align=right><b>{7}</b></td>
+              <td class=gut align=right><b>{8}</b></td>
+              <td class=gut align=right><b>{9}</b></td>
+              <td class=gut align=right><b>{10}</b></td>
+              <td class=gut align=right><b>{11}</b></td>
+              <td class=gut align=right><b>{12}</b></td>
+              <td class=gut align=right><b>{13}</b></td>
+              <td class=gut align=right><b>{14}</b></td>
+              <td class=gut align=right><b>{15}</b></td>
+            </tr>]]>        
+        </Template>      
+      </CommissionSummaryRow>
+      <CommissionRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=3><b>Commission: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </CommissionRow>
+      <ProductionCommissionRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=3><b>Production Commission: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </ProductionCommissionRow>
+      <DrawRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=3><b>Draw Fulfillments: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </DrawRow>
+      <CommissionAccrualRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=3><b>Commission Accrual: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </CommissionAccrualRow>
+      <HoldbackSummaryRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=drw align=center rowspan=5 colspan=4><b>Holdback Summary</b></td>
+              <td class=gtt align=right colspan=3><b>Outstanding AR: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </HoldbackSummaryRow>
+      <ARPercentageRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=3><b>Outstanding AR (%): </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </ARPercentageRow>
+      <InitialHoldbackRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=3><b>Initial 25% Holdback: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </InitialHoldbackRow>
+      <CurrentHoldbackRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=3><b>Current Holdback: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </CurrentHoldbackRow>
+      <HoldbackReleaseRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=3><b>Holdback Release: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </HoldbackReleaseRow>
+      <ProductionSummaryRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr class=hidden>
+              <td class=drw align=center rowspan=3 colspan=4><b>Production Summary</b></td>
+              <td class=gtt align=right colspan=3><b>Production Billings: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </ProductionSummaryRow>
+      <ProductionARRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr class=hidden>
+              <td class=gtt align=right colspan=3><b>Outstanding Production AR: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </ProductionARRow>
+      <ProductionHoldbackRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr class=hidden>
+              <td class=gtt align=right colspan=3><b>Production Holdback: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </ProductionHoldbackRow>
+      <PaymentSummaryRowPre2010>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=drw align=center rowspan=3 colspan=4><b>Payment Summary</b></td>
+              <td class=gtt align=right colspan=3><b>Amount Due: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </PaymentSummaryRowPre2010>
+      <PaymentSummaryRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=drw align=center rowspan=5 colspan=4><b>Payment Summary</b></td>
+              <td class=gtt align=right colspan=3><b>Production Amount Due: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </PaymentSummaryRow>
+      <MediaAmountDueRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>              
+              <td class=gtt align=right colspan=3><b>Media Amount Due: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </MediaAmountDueRow>
+      <AmountDueRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>              
+              <td class=gtt align=right colspan=3><b>Amount Due: </b></td>
+              <td class=cut align=right>{0}</td>
+              <td class=cut align=right>{1}</td>
+              <td class=cut align=right>{2}</td>
+              <td class=cut align=right>{3}</td>
+              <td class=cut align=right>{4}</td>
+              <td class=cut align=right>{5}</td>
+              <td class=cut align=right>{6}</td>
+              <td class=cut align=right>{7}</td>
+              <td class=cut align=right>{8}</td>
+              <td class=cut align=right>{9}</td>
+              <td class=cut align=right>{10}</td>
+              <td class=cut align=right>{11}</td>
+              <td class=cut align=right>{12}</td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </AmountDueRow>
+      <PaymentsRow>
+        <ExpectedValueCount value="1" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=3><b>{0} Payments: </b></td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </PaymentsRow>
+      <AmountPayableRow>
+        <ExpectedValueCount value="0" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=3><b>Amount Payable in Current Pay Period: </b></td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=cut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+              <td class=gut align=right> </td>
+            </tr>]]>
+        </Template>
+      </AmountPayableRow>
+      <ReportEnd>
+        <ExpectedValueCount value="0" />
+        <Template><![CDATA[
+              </table>
+            </body>
+          </html>]]>
+        </Template>
+      </ReportEnd>
+    </FlashReport>
+    <FlashARReport>
+      <ReportStart>
+        <ExpectedValueCount value="0" />
+        <Template>
+          <![CDATA[        
+            <html xmlns:o="urn:schemas-microsoft-com:office:office"
+              xmlns:x="urn:schemas-microsoft-com:office:excel"
+              xmlns="http://www.w3.org/TR/REC-html40">
+              <head>
+                <meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+                <meta name=ProgId content=Excel.Sheet>
+                <title>Titan 360</title>
+                <style>
+                <!--
+                  @page {
+                    margin:.75in .75in .75in .75in;
+                    mso-header-margin:.5in;
+                    mso-footer-margin:.5in;
+                    mso-page-orientation:landscape;
+                    size: 8.5in 14in;
+                  }
+                  .style0	{
+                    mso-number-format:"\#\,\#\#0_\)\;\[Red\]\\\(\#\,\#\#0\\\)";
+                    font-size:8.0pt;
+                  }
+                -->
+                </style>
+                <!--[if gte mso 9]><xml>
+                <x:ExcelWorkbook>
+                  <x:ExcelWorksheets>
+                    <x:ExcelWorksheet>
+                      <x:Name>report</x:Name>
+                      <x:WorksheetOptions>
+                        <x:FitToPage/>
+                        <x:Print>
+                          <x:FitWidth>1</x:FitWidth>
+                          <x:FitHeight>0</x:FitHeight>
+                          <x:ValidPrinterInfo/>
+                          <x:PaperSizeIndex>5</x:PaperSizeIndex>
+                        </x:Print>
+                        <x:DoNotDisplayGridlines/>
+                        <x:FreezePanes/>
+                        <x:FrozenNoSplit/>
+                        <x:SplitHorizontal>2</x:SplitHorizontal>
+                        <x:TopRowBottomPane>2</x:TopRowBottomPane>
+                        <x:SplitVertical>6</x:SplitVertical>
+                        <x:LeftColumnRightPane>6</x:LeftColumnRightPane>
+                        <x:ActivePane>2</x:ActivePane>
+                      </x:WorksheetOptions>
+                    </x:ExcelWorksheet>
+                  </x:ExcelWorksheets>
+                </x:ExcelWorkbook>
+                </xml><![endif]-->
+                <style>
+                  body, td, div { font-family:arial, verdana,Helvetica,sans-serif; font-size:8pt}
+                  .u { padding-left:4px; padding-right:4px; background:#FFFFFF; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .u1 { padding-left:4px; padding-right:4px; background:#FFFFFF; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .u2 { padding-left:4px; padding-right:4px; background:#C5C5C5; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .d { padding-left:4px; padding-right:4px; background:#FFFFFF; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+                  .sc { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap; }
+                  .s { padding-left:4px; padding-right:4px; background:#FFFFFF; white-space: nowrap; }
+                  .sb { padding-left:10px; background:#FFFFFF; white-space: nowrap;height:20px;vertical-align:middle }
+                  .ut{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .dt{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"mm/dd/yyyy" }
+                  .st{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+                  .tt{ padding-left:4px; padding-right:4px; background:#008080;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+                  .gtt{ padding-left:4px; padding-right:4px; background:#2085D6;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+                  .gut{ padding-left:4px; padding-right:4px; background:#2085D6;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .cut{ padding-left:4px; padding-right:4px; background:#FFFFDF;color:#000;vertical-align:middle;height:20px; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .drw{ font-size:18pt;padding-left:4px; padding-right:4px; background:#2085D6;color:#FFF;vertical-align:middle;height:20px; white-space: nowrap; }
+                  .c { padding-left:4px; padding-right:4px; background:#CCFFCC; white-space: nowrap }
+                  .-t {border-collapse: collapse;table-layout:fixed;}
+                  .t {border-collapse: collapse;}
+                  .h { padding-left:4px; padding-right:4px;background:#000080; text-align:center;color:#FFF;height:30px}
+                  .hn { font-size:12pt; padding-left:4px; padding-right:4px;background:#008080; text-align:center;color:#FFF;height:30px}
+                  .hc { padding-left:4px; padding-right:4px;background:#2085D6; text-align:center;color:#FFF;height:30px}
+                  .hf { font-size:10pt; padding-left:4px; padding-right:4px;background:#000080; text-align:center;color:#FFF;height:30px}
+                  .ct { font-size:10pt; padding-left:4px; padding-right:4px;background:#2085D6; text-align:center;color:#FFF;height:30px}
+                  .uc { padding-left:4px; padding-right:4px; background:#FFFFDF; white-space: nowrap;mso-number-format:"\#\,\#\#0.00_\)\;\[Red\]\\\(\#\,\#\#0.00\\\)" }
+                  .e {height:50px}
+                </style>
+              </head>
+              <body>
+        ]]></Template>
+      </ReportStart>
+      <ReportHeaders>
+        <ExpectedValueCount value="3" />
+        <Template>
+          <![CDATA[
+            <table class=t CELLPADDING=0 CELLSPACING=0 border=1 bordercolor=#CCCCCC>
+              <tr>
+                <th class=hn colspan=6 > {0} - {1} as of {2} </th>
+                <th class=hf colspan=13> Outstanding AR Monthly Totals       </th>
+              </tr>
+              <tr>
+                <th class=h style="width:150px"> Advertiser       </th>
+                <th class=h style="width:70px "> Contract #       </th>
+                <th class=h style="width:100px"> Profit Center    </th>
+                <th class=h style="width:150px"> Agency           </th>
+                <th class=h style="width:50px "> National / Local </th>
+                <th class=h style="width:50px "> # AEs            </th>
+                <th class=h style="width:80px "> Jan </th>
+                <th class=h style="width:80px "> Feb </th>
+                <th class=h style="width:80px "> Mar </th>
+                <th class=h style="width:80px "> Apr </th>
+                <th class=h style="width:80px "> May </th>
+                <th class=h style="width:80px "> Jun </th>
+                <th class=h style="width:80px "> Jul </th>
+                <th class=h style="width:80px "> Aug </th>
+                <th class=h style="width:80px "> Sep </th>
+                <th class=h style="width:80px "> Oct </th>
+                <th class=h style="width:80px "> Nov </th>
+                <th class=h style="width:80px "> Dec </th>
+                <th class=h style="width:80px "> Total<br>Outstanding<br>AR </th>
+              </tr>
+        ]]></Template>
+      </ReportHeaders>
+      <ReportRow>
+        <ExpectedValueCount value="19" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=sc align=left  >{0}</td>
+              <td class=sc align=center>{1}</td>
+              <td class=sc align=left  >{2}</td>
+              <td class=sc align=left  >{3}</td>
+              <td class=sc align=center>{4}</td>
+              <td class=sc align=center>{5}</td>
+              <td class=u align=right>{6}</td>
+              <td class=u align=right>{7}</td>
+              <td class=u align=right>{8}</td>
+              <td class=u align=right>{9}</td>
+              <td class=u align=right>{10}</td>
+              <td class=u align=right>{11}</td>
+              <td class=u align=right>{12}</td>
+              <td class=u align=right>{13}</td>
+              <td class=u align=right>{14}</td>
+              <td class=u align=right>{15}</td>
+              <td class=u align=right>{16}</td>
+              <td class=u align=right>{17}</td>
+              <td class=uc align=right>{18}</td>
+            </tr>
+        ]]></Template>
+      </ReportRow>
+      <ReportTotalRow>
+        <ExpectedValueCount value="13" />
+        <Template>
+          <![CDATA[
+            <tr>
+              <td class=gtt align=right colspan=6><b>OUTSTANDING AR: </b></td>
+              <td class=gut align=right><b>{0}</b></td>
+              <td class=gut align=right><b>{1}</b></td>
+              <td class=gut align=right><b>{2}</b></td>
+              <td class=gut align=right><b>{3}</b></td>
+              <td class=gut align=right><b>{4}</b></td>
+              <td class=gut align=right><b>{5}</b></td>
+              <td class=gut align=right><b>{6}</b></td>
+              <td class=gut align=right><b>{7}</b></td>
+              <td class=gut align=right><b>{8}</b></td>
+              <td class=gut align=right><b>{9}</b></td>
+              <td class=gut align=right><b>{10}</b></td>
+              <td class=gut align=right><b>{11}</b></td>
+              <td class=gut align=right><b>{12}</b></td>
+            </tr>
+        ]]></Template>
+      </ReportTotalRow>
+      <ReportEnd>
+        <ExpectedValueCount value="0" />
+        <Template>
+          <![CDATA[
+            </body>
+          </html>
+        ]]></Template>
+      </ReportEnd>
+    </FlashARReport>
+  </CommissionTemplates>
+  <FlashExcelTemplate>
+    <ReportStart>
+      <ExpectedValueCount>0</ExpectedValueCount>
+      <Template><![CDATA[]]>
+      </Template>
+    </ReportStart>
+    <ReportHeaders>
+      <ExpectedValueCount>0</ExpectedValueCount>
+      <Template><![CDATA[]]>
+      </Template>
+    </ReportHeaders>
+  </FlashExcelTemplate>
+  <FlashTemplate>
+    <ReportStart></ReportStart>
+    <ReportHeaders>
+      <ExpectedValueCount>2</ExpectedValueCount>
+      <Template><![CDATA[
+        <tr bgcolor="#ffffff">
+          <td></td>
+          <td colspan='13' style="text-align:center;">
+            <table width="100%" cellpadding='0' cellspacing='0' border='0' bgcolor="#ffffff">
+              <tr>
+                <td class="report_heading" width="50%">&nbsp;</td>
+                <td class="report_heading" nowrap><img src="/Images/flash/blue_thick_bar_left_corner.gif"></td>
+                <td class="report_heading" nowrap background="/Images/flash/blue_thick_bar.gif">&nbsp;&nbsp;{0}&nbsp;&nbsp;</td>
+                <td class="report_heading" nowrap><img src="/Images/flash/blue_thick_bar_right_corner.gif"></td>
+                <td class="report_heading" width="50%">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td></td>
+          <td colspan='13' align="right">
+            <table width='100%' cellpadding='0' cellspacing='0' border='0'>
+              <tr>
+                <td><img src="/Images/flash/blue_bar_left_corner.gif"></td>
+                <td width="100%" background="/Images/flash/blue_bar.gif"></td>
+                <td><img src="/Images/flash/blue_bar_right_corner.gif"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" style="color:#666699;font-weight:bold;text-align:left;">
+            <img src="/Images/but_print.gif" border=0 style="cursor:pointer;" onclick="openprint();">
+            <img src="/Images/but_excel.gif" border=0 style="cursor:pointer;" onclick="openexcel();">
+            <br/>
+            <a href="#" onclick="expandAll();">Expand All</a>
+            <a href="#" onclick="collapseAll();">Collapse All</a>
+          </td>          
+          {1}
+          <td width="6%" class="dashboard_column_head">Total</td>
+        </tr>]]>
+      </Template>
+    </ReportHeaders>
+    <NoContractFoundRow>
+      <ExpectedValueCount>0</ExpectedValueCount>
+      <Template><![CDATA[<tr><td colspan="14" style="text-align:left;">No Contract Found</td></tr>]]></Template>
+    </NoContractFoundRow>
+    <NoRecordFoundRow>
+      <ExpectedValueCount>0</ExpectedValueCount>
+      <Template><![CDATA[
+          <tr bgcolor="#ffffff">
+            <td colspan="15" align="right">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td><img src="/Images/flash/blue_bar_left_corner.gif"></td>
+                  <td width="100%" background="/Images/flash/blue_bar.gif"></td>
+                  <td><img src="/Images/flash/blue_bar_right_corner.gif"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td colspan="14" style="text-align:left;">No Record Found</td></tr>
+          <tr>
+            <td colspan="15" valign="top">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td><img src="/Images/flash/blue_bar_left_flip.gif"></td>
+                  <td width="100%" background="/Images/flash/blue_bar.gif"></td>
+                  <td><img src="/Images/flash/blue_bar_right_corner_flip.gif"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>]]>
+      </Template>
+    </NoRecordFoundRow>
+    <ZeroBalanceRow>
+      <ExpectedValueCount>0</ExpectedValueCount>
+      <Template><![CDATA[
+          <tr bgcolor="#ffffff">
+            <td colspan="15" align="right">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td><img src="/Images/flash/blue_bar_left_corner.gif"></td>
+                  <td width="100%" background="..Images/flash/blue_bar.gif"></td>
+                  <td><img src="/Images/flash/blue_bar_right_corner.gif"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td colspan="14" style="text-align:left;">Contract has a zero balance</td></tr>
+          <tr>
+            <td colspan="15" valign="top">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td><img src="/Images/flash/blue_bar_left_flip.gif"></td>
+                  <td width="100%" background="/Images/flash/blue_bar.gif"></td>
+                  <td><img src="/Images/flash/blue_bar_right_corner_flip.gif"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>]]>
+      </Template>
+    </ZeroBalanceRow>
+  </FlashTemplate>
+</ReportTemplates>

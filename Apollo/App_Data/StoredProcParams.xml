@@ -1,0 +1,2850 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<storedprocedures>
+    <storedproc>
+        <name>GETAPPROVEDBYIDS</name>
+        <params>
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_EXECUTECAMPAIGNSEARCH</name>
+        <params>
+            <param name="CAMPAIGNSEARCHTEXT" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_GETSPOTCAMPAIGNDETAIL</name>
+        <params>
+            <param name="STATIONID" type="int" />
+            <param name="STATIONSPOTID" type="int" />
+            <param name="SPOTDATE" type="date" />
+            <param name="CAMPAIGNNAME" type="varchar" />
+            <param name="CAMPAIGNNUMBER" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_GETSTATIONSPOTS</name>
+        <params>
+            <param name="STATIONID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_GETSPOTTYPEBREAKDOWN</name>
+        <params>
+            <param name="STATIONID" type="int" />
+            <param name="STARTMONTH" type="int" />
+            <param name="STARTYEAR" type="int" />
+            <param name="NUMBEROFMONTHS" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_GETSTATIONDETAIL</name>
+        <params>
+            <param name="STATIONID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_GETSPOTMATRIXFORMARKET</name>
+        <params>
+            <param name="MARKET" type="varchar" />
+            <param name="STARTMONTH" type="int" />
+            <param name="STARTYEAR" type="int" />
+            <param name="NUMBEROFMONTHS" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_GETSPOTMATRIX</name>
+        <params>
+            <param name="STATIONID" type="int" />
+            <param name="STARTMONTH" type="int" />
+            <param name="STARTYEAR" type="int" />
+            <param name="NUMBEROFMONTHS" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_GETSPOTSBYSTATIONID</name>
+        <params>
+            <param name="STATIONID" type="int" />
+            <param name="STARTMONTH" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_DELETESPOT</name>
+        <params>
+            <param name="SPOTID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_UPDATESPOT</name>
+        <params>
+            <param name="SPOTID" type="int" />
+            <param name="STATIONID" type="int" />
+            <param name="SPOTTYPEID" type="int" />
+            <param name="CAMPAIGNNAME" type="varchar" />
+            <param name="CAMPAIGNNUMBER" type="varchar" />
+            <param name="DESCRIPTION" type="varchar" />
+            <param name="LASTUPDATEDBY" type="varchar" />
+            <param name="LASTUPDATEDON" type="datetime" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_ADDSPOTTOMULTIPLESTATIONS</name>
+        <params>
+            <param name="STATIONIDS" type="structured" />
+            <param name="STATIONSPOTID" type="int" />
+            <param name="SPOTTYPEID" type="int" />
+            <param name="SPOTDATE" type="date" />
+            <param name="YEAR" type="int" />
+            <param name="MONTH" type="int" />
+            <param name="WEEK" type="int" />
+            <param name="CAMPAIGNNAME" type="varchar" />
+            <param name="CAMPAIGNNUMBER" type="varchar" />
+            <param name="DESCRIPTION" type="varchar" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="ENTEREDON" type="datetime" />
+            <param name="LASTUPDATEDBY" type="varchar" />
+            <param name="LASTUPDATEDON" type="datetime" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_ADDSPOT</name>
+        <params>
+            <param name="STATIONID" type="int" />
+            <param name="STATIONSPOTID" type="int" />
+            <param name="SPOTTYPEID" type="int" />
+            <param name="SPOTDATE" type="date" />
+            <param name="YEAR" type="int" />
+            <param name="MONTH" type="int" />
+            <param name="WEEK" type="int" />
+            <param name="CAMPAIGNNAME" type="varchar" />
+            <param name="CAMPAIGNNUMBER" type="varchar" />
+            <param name="DESCRIPTION" type="varchar" />            
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="ENTEREDON" type="datetime" />
+            <param name="LASTUPDATEDBY" type="varchar" />
+            <param name="LASTUPDATEDON" type="datetime" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_GETSTATIONSBYMARKET</name>
+        <params>
+            <param name="MARKET" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALAVAILS_GETSPOTTYPESBYMARKET</name>
+        <params>
+            <param name="MARKET" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_GETSUBMARKETLIST</name>
+        <params>
+            <param name="MARKETNAMELONG" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_GETPENDINGACTIONPLANREPORT</name>
+        <params>
+            <param name="YEAR" type="int" />
+            <param name="QUARTER" type="int" />
+            <param name="MARKET" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_GETPENDINGAEREPORT</name>
+        <params>
+            <param name="MONTH" type="int" />
+            <param name="YEAR" type="int" />
+            <param name="AE" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_GETPENDINGMARKETREPORT</name>
+        <params>
+            <param name="MONTH" type="int" />
+            <param name="YEAR" type="int" />
+            <param name="MARKET" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_ISAE</name>
+        <params>
+            <param name="USERID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_GETPENDINGENTRY</name>
+        <params>
+            <param name="PENDINGENTRYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_GETPENDINGPREVIEWIMPORT</name>
+        <params>
+            <param name="MONTH" type="int" />
+            <param name="YEAR" type="int" />
+            <param name="AE" type="varchar" />            
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_GETPENDINGPREVIEW</name>
+        <params>
+            <param name="MONTH" type="int" />
+            <param name="YEAR" type="int" />
+            <param name="AE" type="varchar" />
+            <param name="MARKET" type="varchar" />
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_DELETEPENDINGENTRY</name>
+        <params>
+            <param name="ENTRYID" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_DELETEPENDINGPROJREV</name>
+        <params>
+            <param name="PENDINGPROJREVID" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_UPDATEPENDINGPROJREV</name>
+        <params>
+            <param name="PENDINGPROJREVID" type="int" />
+            <param name="PENDINGENTRYID" type="int" />
+            <param name="ENTEREDBY" type="varchar"/>
+            <param name="YEAR" type="int" />
+            <param name="MONTH" type="int" />
+            <param name="AMOUNT" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_ADDPENDINGPROJREV</name>
+        <params>
+            <param name="ENTEREDBY" type="varchar"/>
+            <param name="PENDINGENTRYID" type="int" />
+            <param name="YEAR" type="int" />
+            <param name="MONTH" type="int" />
+            <param name="AMOUNT" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_ADDPENDINGENTRY</name>
+        <params>
+            <param name="AE" type="varchar" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="DATE" type="datetime" />
+            <param name="CUSTOMER" type="varchar" />
+            <param name="MARKET" type="varchar" />
+            <param name="SUBMARKET" type="varchar" />
+            <param name="PROBABILITYPERCENTAGE" type="int" />
+            <param name="MEDIAQTYKIOSK" type="varchar" />
+            <param name="MEDIAQTYBANNER" type="varchar" />
+            <param name="MEDIAQTYBILLBOARD" type="varchar" />
+            <param name="MEDIAQTYSUBWAY" type="varchar" />
+            <param name="MEDIAQTYRAIL" type="varchar" />
+            <param name="MEDIAQTYINTBUS" type="varchar" />
+            <param name="MEDIAQTYEXTBUS" type="varchar" />
+            <param name="MEDIAQTYDIGITAL" type="varchar" />
+            <param name="COMMENTS" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PENDING_UPDATEPENDINGENTRY</name>
+        <params>
+            <param name="AE" type="varchar" />
+            <param name="ENTRYID" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="DATE" type="datetime" />
+            <param name="CUSTOMER" type="varchar" />
+            <param name="MARKET" type="varchar" />
+            <param name="SUBMARKET" type="varchar" />
+            <param name="PROBABILITYPERCENTAGE" type="int" />
+            <param name="MEDIAQTYKIOSK" type="varchar" />
+            <param name="MEDIAQTYBANNER" type="varchar" />
+            <param name="MEDIAQTYBILLBOARD" type="varchar" />
+            <param name="MEDIAQTYSUBWAY" type="varchar" />
+            <param name="MEDIAQTYRAIL" type="varchar" />
+            <param name="MEDIAQTYINTBUS" type="varchar" />
+            <param name="MEDIAQTYEXTBUS" type="varchar" />
+            <param name="MEDIAQTYDIGITAL" type="varchar" />
+            <param name="COMMENTS" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>HR_GETNEWEMPLOYEEREQUEST</name>
+        <params>
+            <param name="REQUESTID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>HR_ADDNEWEMPLOYEEREQUEST</name>
+        <params>
+            <param name="REQUESTORNAME" type="varchar" />
+            <param name="REQUESTORID" type="varchar" />
+            <param name="REQUESTDATE" type="date" />
+            <param name="REQUESTOREMAIL" type="varchar" />
+            <param name="NEWEMPLOYEENAME" type="varchar" />
+            <param name="NEWEMPLOYEESTARTDATE" type="date" />
+            <param name="NEWEMPLOYEETITLE" type="varchar" />
+            <param name="NEWEMPLOYEEOFFICE" type="varchar" />
+            <param name="NEWEMPLOYEEDEPT" type="varchar" />
+            <param name="ISREPLACINGPREVIOUSEMPLOYEE" type="int" />
+            <param name="PREVIOUSEMPLOYEENAME" type="varchar" />
+            <param name="REQUIRESNEWWORKSTATION" type="int" />
+            <param name="NEWWORKSTATIONTYPE" type="varchar" />
+            <param name="NEWWORKSTATIONADDITIONALREQUESTS" type="varchar" />
+            <param name="NEWWORKSTATIONPERIPHERALS" type="varchar" />
+            <param name="EXISTINGWORKSTATIONLOCATION" type="varchar" />
+            <param name="EXISTINGWORKSTATIONIP" type="varchar" />
+            <param name="REQUIRESDESKTOPPHONE" type="int" />
+            <param name="ISEXISTINGDESKTOPPHONE" type="int" />
+            <param name="EXISTINGDESKTOPPHONENUMBER" type="varchar" />
+            <param name="NEWDESKTOPPHONEINFO" type="varchar" />
+            <param name="REQUIRESMOBILEPHONE" type="int" />
+            <param name="MOBILEPHONETYPE" type="varchar" />
+            <param name="MOBILEPHONEADDITIONALREQUESTS" type="varchar" />
+            <param name="NEWEMPLOYEEEMAIL" type="varchar" />
+            <param name="ADDITIONALEMAILALIASES" type="varchar" />
+            <param name="DISTRIBUTIONLISTS" type="varchar" />
+            <param name="DEPARTMENTSHARES" type="varchar" />
+            <param name="REMOTEACCESS" type="varchar" />
+            <param name="NONSTANDARDAPPS" type="varchar" />
+            <param name="PRINTERACCESS" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PHOTOGALLERY_RETRIEVEITEMLIST</name>
+        <params>
+            <param name="PARENTPATH" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PRODUCTION_DELETELOCATION</name>
+        <params>
+            <param name="LOCATIONID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PRODUCTION_DELETEBOOKING</name>
+        <params>
+            <param name="BOOKINGID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PRODUCTION_GETBOOKINGBYID</name>
+        <params>
+            <param name="BOOKINGID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PRODUCTION_ADDUPDATELOCATION</name>
+        <params>
+            <param name="LOCATIONID" type="int" />
+            <param name="LOCATIONMARKET" type="varchar" />
+            <param name="LOCATIONDESC" type="varchar" />
+            <param name="FOURWEEKRATE" type="varchar" />
+            <param name="PRODINSTALLRATE" type="varchar" />
+            <param name="PRODINSTALLRATEADDITIONAL" type="varchar" />
+            <param name="LOCATIONSTATUSID" type="int" />
+            <param name="LOCATIONCOMMENTS" type="varchar" />
+            <param name="RESERVEWINTERMONTHS" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PRODUCTION_ADDUPDATEBOOKING</name>
+        <params>
+            <param name="LOCATIONID" type="int" />
+            <param name="BOOKINGID" type="int" />
+            <param name="BOOKINGDESC" type="varchar" />
+            <param name="STARTDATE" type="datetime" />
+            <param name="ENDDATE" type="datetime" />
+            <param name="BOOKINGSTATUSID" type="int" />
+            <param name="BOOKINGCOMMENTS" type="varchar" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="AENTID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>PRODUCTION_GETAVAILSLIST</name>
+        <params>
+            <param name="YEAR" type="int" />
+            <param name="MARKET" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_DELETEAGENCY</name>
+        <params>
+            <param name="AGENCYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_DELETEADVERTISER</name>
+        <params>
+            <param name="ADVERTISERID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_EDITCLIENTAEXREF</name>
+        <params>
+            <param name="CLIENTAEXREFID" type="int" />
+            <param name="CLIENTID" type="int" />
+            <param name="CLIENTTYPE" type="varchar" />
+            <param name="AEID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_REMOVECLIENTAEXREF</name>
+        <params>
+            <param name="CLIENTAEXREFID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_ASSIGNCLIENTAE</name>
+        <params>
+            <param name="CLIENTID" type="int" />
+            <param name="CLIENTTYPE" type="varchar" />
+            <param name="AEID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETCLIENTAELIST</name>
+        <params>
+            <param name="CLIENTID" type="int" />
+            <param name="CLIENTTYPE" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_EDITADVERTISERNAME</name>
+        <params>
+            <param name="ADVERTISERID" type="int" />
+            <param name="ADVERTISERNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_EDITAGENCYNAME</name>
+        <params>
+            <param name="AGENCYID" type="int" />
+            <param name="AGENCYNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETFULLCLIENTLIST_WSEARCHTERM</name>
+        <params>
+            <param name="SEARCHTERM" type="varchar" />
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETFULLCLIENTLIST_WUSERFIELDS</name>
+        <params>
+            <param name="AEID" type="varchar" />
+            <param name="CLIENTTYPE" type="varchar" />
+            <param name="CATEGORYNAME" type="varchar" />
+            <param name="WANTAE" type="int" />
+            <param name="WANTCLIENTNAME" type="int" />
+            <param name="WANTCLIENTTYPE" type="int" />
+            <param name="WANTCATEGORY" type="int" />
+            <param name="WANTBRAND" type="int" />
+            <param name="WANTCONTACTNAME" type="int" />
+            <param name="WANTCONTACTTITLE" type="int" />
+            <param name="WANTCONTACTEMAIL" type="int" />
+            <param name="WANTCONTACTPHONE" type="int" />
+            <param name="WANTCONTACTFAX" type="int" />
+            <param name="WANTCONTACTCELL" type="int" />
+            <param name="WANTCONTACTNOTES" type="int" />
+            <param name="WANTADDRESSLINE1" type="int" />
+            <param name="WANTADDRESSLINE2" type="int" />
+            <param name="WANTCITY" type="int" />
+            <param name="WANTSTATE" type="int" />
+            <param name="WANTZIP" type="int" />
+            <param name="WANTADDRPHONE" type="int" />
+            <param name="WANTADDRFAX" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETFULLCLIENTLIST</name>
+        <params>
+            <param name="AEID" type="varchar" />
+            <param name="CLIENTTYPEID" type="int" />
+            <param name="CATEGORYNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_UPDATEADDRESS</name>
+        <params>
+            <param name="ADDRESSID" type="int" />
+            <param name="ADDRESS1" type="varchar" />
+            <param name="ADDRESS2" type="varchar" />
+            <param name="CITY" type="varchar" />
+            <param name="PROV" type="varchar" />
+            <param name="POSTAL" type="varchar" />
+            <param name="PHONE" type="varchar" />
+            <param name="FAX" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_UPDATENOTE</name>
+        <params>
+            <param name="NOTEID" type="int" />
+            <param name="NOTETEXT" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_UPDATEADVERTISERCATEGORY</name>
+        <params>
+            <param name="ADVERTISERID" type="int" />
+            <param name="CATEGORYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_ADDAGENCY</name>
+        <params>
+            <param name="AGENCYNAME" type="varchar" />
+            <param name="AEID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_ADDADVERTISER</name>
+        <params>
+            <param name="ADVERTISERNAME" type="varchar" />
+            <param name="CATEGORYID" type="int" />
+            <param name="AEID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_REMOVENOTE</name>
+        <params>
+            <param name="NOTEID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_REMOVEAGENCYADVERTISERXREF</name>
+        <params>
+            <param name="AGENCYADVERTISERXREFID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_ADDADVERTISERAGENCYASSOCIATION</name>
+        <params>
+            <param name="ADVERTISERID" type="int" />
+            <param name="AGENCYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_AUTOCOMPLETE_GETADVERTISERS</name>
+        <params>
+            <param name="PREFIXTEXT" type="varchar" />
+            <param name="COUNT" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_REMOVECONTACT</name>
+        <params>
+            <param name="CONTACTID" type="int" />
+            <param name="CONTACTXREFID" type="int" />
+            <param name="CONTACTTYPE" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_UPDATECONTACT</name>
+        <params>
+            <param name="CONTACTID" type="int" />
+            <param name="AGENCYXREFID" type="int" />
+            <param name="ADVERTISERID" type="int" />
+            <param name="FIRSTNAME" type="varchar" />
+            <param name="LASTNAME" type="varchar" />
+            <param name="TITLE" type="varchar" />
+            <param name="EMAIL" type="varchar" />
+            <param name="PHONE" type="varchar" />
+            <param name="FAX" type="varchar" />
+            <param name="CELL" type="varchar" />
+            <param name="CONTACTNOTE" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_ADDCONTACT</name>
+        <params>
+            <param name="CLIENTID" type="int" />
+            <param name="CLIENTTYPE" type="int" />
+            <param name="ADVERTISERID" type="int" />
+            <param name="FIRSTNAME" type="varchar" />
+            <param name="LASTNAME" type="varchar" />
+            <param name="TITLE" type="varchar" />
+            <param name="EMAIL" type="varchar" />
+            <param name="PHONE" type="varchar" />
+            <param name="FAX" type="varchar" />
+            <param name="CELL" type="varchar" />
+            <param name="CONTACTNOTE" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_ADDADDRESS</name>
+        <params>
+            <param name="CLIENTID" type="int" />
+            <param name="CLIENTTYPE" type="int" />
+            <param name="ADDRESS1" type="varchar" />
+            <param name="ADDRESS2" type="varchar" />
+            <param name="CITY" type="varchar" />
+            <param name="PROV" type="varchar" />
+            <param name="POSTAL" type="varchar" />
+            <param name="PHONE" type="varchar" />
+            <param name="FAX" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_REMOVEADDRESS</name>
+        <params>
+            <param name="ADDRESSID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_ADDADVERTISERBRANDXREF</name>
+        <params>
+            <param name="ADVERTISERID" type="int" />
+            <param name="BRANDNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_REMOVEADVERTISERBRANDXREF</name>
+        <params>
+            <param name="ADVERTISERBRANDXREFID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_ADDNOTE</name>
+        <params>
+            <param name="REFID" type="int" />
+            <param name="NOTETYPE" type="int" />
+            <param name="NOTETEXT" type="varchar" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETNOTELIST</name>
+        <params>
+            <param name="CLIENTID" type="int" />
+            <param name="CLIENTTYPE" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETAGENCYCONTACTLIST</name>
+        <params>
+            <param name="AGENCYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETADVERTISERCONTACTLIST</name>
+        <params>
+            <param name="ADVERTISERID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETAGENCYDATA</name>
+        <params>
+            <param name="AGENCYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETADVERTISERDATA</name>
+        <params>
+            <param name="ADVERTISERID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETASSOCIATEDADVERTISER</name>
+        <params>
+            <param name="AGENCYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETBRANDLIST</name>
+        <params>
+            <param name="ADVERTISERID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETADDRESSLIST</name>
+        <params>
+            <param name="CLIENTID" type="int" />
+            <param name="CLIENTTYPE" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_UPSERTAECLIENTXREF</name>
+        <params>
+            <param name="AEID" type="varchar" />
+            <param name="CLIENTID" type="int" />
+            <param name="CLIENTTYPE" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETUNASSIGNEDAGENCIES</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="AGENCYNAME" type="varchar" />
+            <param name="CATEGORYNAME" type="varchar" />
+            <param name="ADVERTISERNAME" type="varchar" />
+            <param name="BRANDNAME" type="varchar" />
+            <param name="CONTACTNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETUNASSIGNEDDIRECTS</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="CATEGORYNAME" type="varchar" />
+            <param name="ADVERTISERNAME" type="varchar" />
+            <param name="BRANDNAME" type="varchar" />
+            <param name="CONTACTNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETASSIGNEDAGENCIES</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="AENAME" type="varchar" />
+            <param name="AGENCYNAME" type="varchar" />
+            <param name="CATEGORYNAME" type="varchar" />
+            <param name="ADVERTISERNAME" type="varchar" />
+            <param name="BRANDNAME" type="varchar" />
+            <param name="CONTACTNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>TORONTO_GETASSIGNEDDIRECTS</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="AENAME" type="varchar" />
+            <param name="CATEGORYNAME" type="varchar" />
+            <param name="ADVERTISERNAME" type="varchar" />
+            <param name="BRANDNAME" type="varchar" />
+            <param name="CONTACTNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_EXECUTEATTACHMENTSEARCH</name>
+        <params>
+            <param name="CONTRACTNUMBERS" type="structured" />
+            <param name="INVOICENUMBERS" type="structured" />
+            <param name="ADVERTISER" type="varchar" />
+            <param name="UIDOBJECTTYPE" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETATTACHMENTTYPES</name>
+        <params>
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_CCNREPORT_CHECKFORNOTIFICATIONEMAIL</name>
+        <params>
+            <param name="UIDCMPGN" type="int" />
+            <param name="ATTACHMENTID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_CCNREPORT_CHECKFORCOMPLETIONEMAIL</name>
+        <params>
+            <param name="UIDCMPGN" type="int" />
+            <param name="ATTACHMENTID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_CCNREPORT_TOGGLENOTIFICATIONEMAILFLAG</name>
+        <params>
+            <param name="UIDCMPGN" type="int" />
+            <param name="ADDEDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+            <param name="ISNOTIFICATIONEMAILSENT" type="int" />
+            <param name="ATTACHMENTID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_CCNREPORT_TOGGLECOMPLETIONEMAILFLAG</name>
+        <params>
+            <param name="UIDCMPGN" type="int" />
+            <param name="ADDEDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+            <param name="ISCOMPLETIONEMAILSENT" type="int" />
+            <param name="ATTACHMENTID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETCONTRACTCCNS</name>
+        <params>
+            <param name="ATTACHMENTDATEFROM" type="date" />
+            <param name="ATTACHMENTDATETO" type="date" />
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="COMPANYID" type="int" />
+            <param name="CONTRACTNUMBER" type="varchar" />
+            <param name="ATTACHMENTNAME" type="varchar" />
+            <param name="ATTACHMENTTITLE" type="varchar" />
+            <param name="ATTACHMENTDESCRIPTION" type="varchar" />
+            <param name="NOTETEXT" type="varchar" />
+            
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETCAMPAIGNAUDIT</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETINVOICEAUDIT</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETINVOICELINEAUDIT</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETINVOICELINEGLOVERRIDEAUDIT</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_TOGGLEUNINVOICEDAPPROVAL</name>
+        <params>
+            <param name="APPROVALID" type="int" />
+            <param name="UID_CMPGN" type="int" />
+            <param name="APPROVEDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_ADDUPDATECCNNOTE</name>
+        <params>
+            <param name="UID_CMPGN" type="int" />
+            <param name="ATTACHMENTID" type="int" />
+            <param name="NOTETEXT" type="varchar" />
+            <param name="ADDEDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_ADDUPDATEUNINVOICEDNOTE</name>
+        <params>
+            <param name="UID_CMPGN" type="int" />
+            <param name="NOTETEXT" type="varchar" />
+            <param name="ADDEDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETUNINVOICEDSEGMENTINFO</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="CONTRACTNUMBER" type="varchar" />
+            <param name="CONTRACTSTATUS" type="varchar" />
+            <param name="CAMPAIGNTYPE" type="varchar" />
+            <param name="CUSTOMER" type="varchar" />
+            <param name="SEGMENTSTATUS" type="varchar" />
+            <param name="SEGMENTSALESMARKET" type="varchar" />
+            <param name="ISMISSINGSPLIT" type="varchar" />
+            <param name="MEDIATYPE" type="varchar" />
+            <param name="MEDIAPRODUCT" type="varchar" />
+            <param name="SEGMENTSPACERESERVED" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETUNINVOICEDCONTRACTBREAKDOWN</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="CONTRACTNUMBER" type="varchar" />
+            <param name="CAMPAIGNTYPE" type="varchar" />
+            <param name="CUSTOMER" type="varchar" />
+            <param name="NUMCMPGNSEGMENTS" type="varchar" />
+            <param name="NUMBARTERSEGMENTS" type="varchar" />
+            <param name="MARKET" type="varchar" />
+            <param name="ISMISSINGSPLIT" type="varchar" />
+            <param name="ISBANNER" type="varchar" />
+            <param name="FOREXCEL" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COLLECTIONS_ADDMTAINVOICENOTE</name>
+        <params>
+            <param name="INVOICENUMBER" type="int" />
+            <param name="NOTES" type="varchar" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COLLECTIONS_GETMTAINVOICENOTESGRID</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COLLECTIONS_ADDCREDITCHECKNOTE</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+            <param name="CREDITAPPPREPAY" type="varchar" />
+            <param name="CREDITCHECKED" type="varchar" />
+            <param name="NOTES" type="ntext" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COLLECTIONS_CREDITCHECKINGDASHBOARD</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENDDATE" type="date" />
+            <param name="CUSTOMERTYPE" type="varchar" />
+            <param name="CONTRACTVALUE" type="varchar" />
+            <param name="STATUS" type="varchar" />
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIG_UPDATELATLONG</name>
+        <params>
+            <param name="IMAGEID" type="int" />
+            <param name="IMAGELAT" type="decimal" />
+            <param name="IMAGELONG" type="decimal" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MKT_GETNEWBUSINESSDETAILSBYID</name>
+        <params>
+            <param name="BUSINESSID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MKT_REMOVESALESPERSON</name>
+        <params>
+            <param name="BUSINESSID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MKT_REMOVENEWBUSINESSDEADLINK</name>
+        <params>
+            <param name="DEADLINKID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MKT_ADDNEWBUSINESSDEADLINK</name>
+        <params>
+            <param name="BUSINESSID" type="int" />
+            <param name="SALESPERSONNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MKT_ADDSALESPERSONNEWBUSINESSCALLBACK</name>
+        <params>
+            <param name="BUSINESSID" type="int" />
+            <param name="SALESPERSONNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MKT_GETNEWBUSINESSGRID</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="MARKETID" type="varchar" />
+            <param name="ID" type="varchar" />
+            <param name="UPLOADDATE" type="date" />
+            <param name="COMPANYNAME" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME" type="varchar" />
+            <param name="EXECUTIVELASTNAME" type="varchar" />
+            <param name="PROFESSIONALTITLE" type="varchar" />
+            <param name="EXECUTIVETITLE" type="varchar" />
+            <param name="EXECUTIVEGENDER" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY" type="varchar" />
+            <param name="ADDRESS" type="varchar" />
+            <param name="CITY" type="varchar" />
+            <param name="STATE" type="varchar" />
+            <param name="LOCATIONZIPCODE" type="varchar" />
+            <param name="LOCATIONZIPFOUR" type="varchar" />
+            <param name="COUNTYCODE" type="varchar" />
+            <param name="METROAREA" type="varchar" />
+            <param name="NEIGHBORHOOD" type="varchar" />
+            <param name="PHONE" type="varchar" />
+            <param name="FAXNUMBERCOMBINED" type="varchar" />
+            <param name="TOLLFREENUMBERCOMBINED" type="varchar" />
+            <param name="COMPANYWEBSITE" type="varchar" />
+            <param name="COMPANYDESCRIPTION" type="varchar" />
+            <param name="PRIMARYSICCODE" type="varchar" />
+            <param name="PRIMARYSICDESCRIPTION" type="varchar" />
+            <param name="PRIMARYSICADSIZE" type="varchar" />
+            <param name="PRIMARYSICYEARAPPEARED" type="varchar" />
+            <param name="SICCODE1" type="varchar" />
+            <param name="SICCODE1DESCRIPTION" type="varchar" />
+            <param name="SICCODE1ADSIZE" type="varchar" />
+            <param name="SICCODE1YEARAPPEARED" type="varchar" />
+            <param name="SICCODE2" type="varchar" />
+            <param name="SICCODE2DESCRIPTION" type="varchar" />
+            <param name="SICCODE2YEARAPPEARED" type="varchar" />
+            <param name="SICCODE3" type="varchar" />
+            <param name="SICCODE3DESCRIPTION" type="varchar" />
+            <param name="SICCODE3YEARAPPEARED" type="varchar" />
+            <param name="SICCODE4" type="varchar" />
+            <param name="SICCODE4DESCRIPTION" type="varchar" />
+            <param name="SICCODE4YEARAPPEARED" type="varchar" />
+            <param name="SICCODE5" type="varchar" />
+            <param name="SICCODE5DESCRIPTION" type="varchar" />
+            <param name="SICCODE5YEARAPPEARED" type="varchar" />
+            <param name="SICCODE6" type="varchar" />
+            <param name="SICCODE6DESCRIPTION" type="varchar" />
+            <param name="SICCODE6YEARAPPEARED" type="varchar" />
+            <param name="SICCODE7" type="varchar" />
+            <param name="SICCODE7DESCRIPTION" type="varchar" />
+            <param name="SICCODE7YEARAPPEARED" type="varchar" />
+            <param name="SICCODE8" type="varchar" />
+            <param name="SICCODE8DESCRIPTION" type="varchar" />
+            <param name="SICCODE8YEARAPPEARED" type="varchar" />
+            <param name="SICCODE9" type="varchar" />
+            <param name="SICCODE9DESCRIPTION" type="varchar" />
+            <param name="SICCODE9YEARAPPEARED" type="varchar" />
+            <param name="SICCODE10" type="varchar" />
+            <param name="SICCODE10DESCRIPTION" type="varchar" />
+            <param name="SICCODE10YEARAPPEARED" type="varchar" />
+            <param name="SICCODE11" type="varchar" />
+            <param name="SICCODE11DESCRIPTION" type="varchar" />
+            <param name="SICCODE12" type="varchar" />
+            <param name="SICCODE12DESCRIPTION" type="varchar" />
+            <param name="SICCODE13" type="varchar" />
+            <param name="SICCODE13DESCRIPTION" type="varchar" />
+            <param name="SICCODE14" type="varchar" />
+            <param name="SICCODE14DESCRIPTION" type="varchar" />
+            <param name="SICCODE15" type="varchar" />
+            <param name="SICCODE15DESCRIPTION" type="varchar" />
+            <param name="SICCODE16" type="varchar" />
+            <param name="SICCODE16DESCRIPTION" type="varchar" />
+            <param name="SICCODE17" type="varchar" />
+            <param name="SICCODE17DESCRIPTION" type="varchar" />
+            <param name="SICCODE18" type="varchar" />
+            <param name="SICCODE18DESCRIPTION" type="varchar" />
+            <param name="SICCODE19" type="varchar" />
+            <param name="SICCODE19DESCRIPTION" type="varchar" />
+            <param name="SICCODE20" type="varchar" />
+            <param name="SICCODE20DESCRIPTION" type="varchar" />
+            <param name="SICCODE21" type="varchar" />
+            <param name="SICCODE21DESCRIPTION" type="varchar" />
+            <param name="SICCODE22" type="varchar" />
+            <param name="SICCODE22DESCRIPTION" type="varchar" />
+            <param name="SICCODE23" type="varchar" />
+            <param name="SICCODE23DESCRIPTION" type="varchar" />
+            <param name="SICCODE24" type="varchar" />
+            <param name="SICCODE24DESCRIPTION" type="varchar" />
+            <param name="SICCODE25" type="varchar" />
+            <param name="SICCODE25DESCRIPTION" type="varchar" />
+            <param name="SICCODE26" type="varchar" />
+            <param name="SICCODE26DESCRIPTION" type="varchar" />
+            <param name="PRIMARYNAICS" type="varchar" />
+            <param name="PRIMARYNAICSDESCRIPTION" type="varchar" />
+            <param name="NAICS1" type="varchar" />
+            <param name="NAICS1DESCRIPTION" type="varchar" />
+            <param name="NAICS2" type="varchar" />
+            <param name="NAICS2DESCRIPTION" type="varchar" />
+            <param name="NAICS3" type="varchar" />
+            <param name="NAICS3DESCRIPTION" type="varchar" />
+            <param name="NAICS4" type="varchar" />
+            <param name="NAICS4DESCRIPTION" type="varchar" />
+            <param name="NAICS5" type="varchar" />
+            <param name="NAICS5DESCRIPTION" type="varchar" />
+            <param name="NAICS6" type="varchar" />
+            <param name="NAICS6DESCRIPTION" type="varchar" />
+            <param name="NAICS7" type="varchar" />
+            <param name="NAICS7DESCRIPTION" type="varchar" />
+            <param name="NAICS8" type="varchar" />
+            <param name="NAICS8DESCRIPTION" type="varchar" />
+            <param name="NAICS9" type="varchar" />
+            <param name="NAICS9DESCRIPTION" type="varchar" />
+            <param name="NAICS10" type="varchar" />
+            <param name="NAICS10DESCRIPTION" type="varchar" />
+            <param name="NAICS11" type="varchar" />
+            <param name="NAICS11DESCRIPTION" type="varchar" />
+            <param name="NAICS12" type="varchar" />
+            <param name="NAICS12DESCRIPTION" type="varchar" />
+            <param name="NAICS13" type="varchar" />
+            <param name="NAICS14DESCRIPTION" type="varchar" />
+            <param name="NAICS14" type="varchar" />
+            <param name="NAICS13DESCRIPTION" type="varchar" />
+            <param name="NAICS15" type="varchar" />
+            <param name="NAICS15DESCRIPTION" type="varchar" />
+            <param name="NAICS16" type="varchar" />
+            <param name="NAICS16DESCRIPTION" type="varchar" />
+            <param name="NAICS17" type="varchar" />
+            <param name="NAICS17DESCRIPTION" type="varchar" />
+            <param name="NAICS18" type="varchar" />
+            <param name="NAICS18DESCRIPTION" type="varchar" />
+            <param name="NAICS19" type="varchar" />
+            <param name="NAICS19DESCRIPTION" type="varchar" />
+            <param name="NAICS20" type="varchar" />
+            <param name="NAICS20DESCRIPTION" type="varchar" />
+            <param name="NAICS21" type="varchar" />
+            <param name="NAICS21DESCRIPTION" type="varchar" />
+            <param name="NAICS22" type="varchar" />
+            <param name="NAICS22DESCRIPTION" type="varchar" />
+            <param name="NAICS23" type="varchar" />
+            <param name="NAICS23DESCRIPTION" type="varchar" />
+            <param name="NAICS24" type="varchar" />
+            <param name="NAICS24DESCRIPTION" type="varchar" />
+            <param name="NAICS25" type="varchar" />
+            <param name="NAICS25DESCRIPTION" type="varchar" />
+            <param name="NAICS26" type="varchar" />
+            <param name="NAICS26DESCRIPTION" type="varchar" />
+            <param name="FRANCHISEDESCRIPTION" type="varchar" />
+            <param name="LOCATIONEMPLOYEESIZERANGE" type="varchar" />
+            <param name="LOCATIONEMPLOYEESIZEACTUAL" type="varchar" />
+            <param name="LOCATIONSALESVOLUMERANGE" type="varchar" />
+            <param name="LOCATIONSALESVOLUMEACTUAL" type="varchar" />
+            <param name="CORPORATEEMPLOYEESIZERANGE" type="varchar" />
+            <param name="CORPORATEEMPLOYEESIZEACTUAL" type="varchar" />
+            <param name="CORPORATESALESVOLUMERANGE" type="varchar" />
+            <param name="CORPORATESALESVOLUMEACTUAL" type="varchar" />
+            <param name="HOLDINGSTATUS" type="varchar" />
+            <param name="LOCATIONTYPE" type="varchar" />
+            <param name="PARENTCOMPANYNAME" type="varchar" />
+            <param name="PARENTIUSANUMBER" type="varchar" />
+            <param name="FOREIGNPARENTFLAG" type="varchar" />
+            <param name="FORTUNE1000RANKING" type="varchar" />
+            <param name="CREDITSCOREALPHA" type="varchar" />
+            <param name="CREDITSCORENUMERIC" type="varchar" />
+            <param name="CREDITRATING" type="varchar" />
+            <param name="LATITUDE" type="varchar" />
+            <param name="LONGITUDE" type="varchar" />
+            <param name="CREDITCARDSACCEPTED" type="varchar" />
+            <param name="YEARESTABLISHED" type="varchar" />
+            <param name="YEARSINDATABASE" type="varchar" />
+            <param name="NUMBEROFPCS" type="varchar" />
+            <param name="SQUAREFOOTAGE" type="varchar" />
+            <param name="HOMEBUSINESSFLAG" type="varchar" />
+            <param name="IUSANUMBER" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME1" type="varchar" />
+            <param name="EXECUTIVELASTNAME1" type="varchar" />
+            <param name="EXECUTIVETITLE1" type="varchar" />
+            <param name="EXECUTIVEGENDER1" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY1" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME2" type="varchar" />
+            <param name="EXECUTIVELASTNAME2" type="varchar" />
+            <param name="EXECUTIVETITLE2" type="varchar" />
+            <param name="EXECUTIVEGENDER2" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY2" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME3" type="varchar" />
+            <param name="EXECUTIVELASTNAME3" type="varchar" />
+            <param name="EXECUTIVETITLE3" type="varchar" />
+            <param name="EXECUTIVEGENDER3" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY3" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME4" type="varchar" />
+            <param name="EXECUTIVELASTNAME4" type="varchar" />
+            <param name="EXECUTIVETITLE4" type="varchar" />
+            <param name="EXECUTIVEGENDER4" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY4" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME5" type="varchar" />
+            <param name="EXECUTIVELASTNAME5" type="varchar" />
+            <param name="EXECUTIVEGENDER5" type="varchar" />
+            <param name="EXECUTIVETITLE5" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY5" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME6" type="varchar" />
+            <param name="EXECUTIVELASTNAME6" type="varchar" />
+            <param name="EXECUTIVETITLE6" type="varchar" />
+            <param name="EXECUTIVEGENDER6" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY6" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME7" type="varchar" />
+            <param name="EXECUTIVELASTNAME7" type="varchar" />
+            <param name="EXECUTIVETITLE7" type="varchar" />
+            <param name="EXECUTIVEGENDER7" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY7" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME8" type="varchar" />
+            <param name="EXECUTIVELASTNAME8" type="varchar" />
+            <param name="EXECUTIVETITLE8" type="varchar" />
+            <param name="EXECUTIVEGENDER8" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY8" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME9" type="varchar" />
+            <param name="EXECUTIVELASTNAME9" type="varchar" />
+            <param name="EXECUTIVETITLE9" type="varchar" />
+            <param name="EXECUTIVEGENDER9" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY9" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME10" type="varchar" />
+            <param name="EXECUTIVELASTNAME10" type="varchar" />
+            <param name="EXECUTIVETITLE10" type="varchar" />
+            <param name="EXECUTIVEGENDER10" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY10" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME11" type="varchar" />
+            <param name="EXECUTIVELASTNAME11" type="varchar" />
+            <param name="EXECUTIVETITLE11" type="varchar" />
+            <param name="EXECUTIVEGENDER11" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY11" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME12" type="varchar" />
+            <param name="EXECUTIVELASTNAME12" type="varchar" />
+            <param name="EXECUTIVETITLE12" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY12" type="varchar" />
+            <param name="EXECUTIVEGENDER12" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME13" type="varchar" />
+            <param name="EXECUTIVELASTNAME13" type="varchar" />
+            <param name="EXECUTIVETITLE13" type="varchar" />
+            <param name="EXECUTIVEGENDER13" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY13" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME14" type="varchar" />
+            <param name="EXECUTIVELASTNAME14" type="varchar" />
+            <param name="EXECUTIVETITLE14" type="varchar" />
+            <param name="EXECUTIVEGENDER14" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY14" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME15" type="varchar" />
+            <param name="EXECUTIVELASTNAME15" type="varchar" />
+            <param name="EXECUTIVETITLE15" type="varchar" />
+            <param name="EXECUTIVEGENDER15" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY15" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME16" type="varchar" />
+            <param name="EXECUTIVELASTNAME16" type="varchar" />
+            <param name="EXECUTIVETITLE16" type="varchar" />
+            <param name="EXECUTIVEGENDER16" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY16" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME17" type="varchar" />
+            <param name="EXECUTIVELASTNAME17" type="varchar" />
+            <param name="EXECUTIVETITLE17" type="varchar" />
+            <param name="EXECUTIVEGENDER17" type="varchar" />
+            <param name="EXECUTIVEBIOGRAPHY17" type="varchar" />
+            <param name="EXECUTIVEFIRSTNAME18" type="varchar" />
+            <param name="EXECUTIVELASTNAME18" type="varchar" />
+            <param name="EXECUTIVETITLE18" type="varchar" />
+            <param name="CONTACTEDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETINVOICENUMBERSBYCONTRACT</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="varchar"/>
+            <param name="COMPANYID" type="int"/>
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETINVOICEDATA</name>
+        <params>
+            <param name="INVOICENUMBER" type="int"/>
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_GETMARKETTARGETS</name>
+        <params>
+            <param name="MARKETID" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_ADDMARKETTARGETS</name>
+        <params>
+            <param name="MARKETID" type="varchar" />
+            <param name="DIRECTBUCKET1" type="int" />
+            <param name="DIRECTBUCKET2" type="int" />
+            <param name="DIRECTBUCKET3" type="int" />
+            <param name="DIRECTBUCKET4" type="int" />
+            <param name="DIRECTBUCKET5" type="int" />
+            <param name="DIRECTBUCKET6" type="int" />
+            <param name="AGENCYBUCKET1" type="int" />
+            <param name="AGENCYBUCKET2" type="int" />
+            <param name="AGENCYBUCKET3" type="int" />
+            <param name="AGENCYBUCKET4" type="int" />
+            <param name="AGENCYBUCKET5" type="int" />
+            <param name="AGENCYBUCKET6" type="int" />
+            <param name="UPDATEDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_UPDATEMARKETTARGETS</name>
+        <params>
+            <param name="TARGETID" type="int" />
+            <param name="DIRECTBUCKET1" type="int" />
+            <param name="DIRECTBUCKET2" type="int" />
+            <param name="DIRECTBUCKET3" type="int" />
+            <param name="DIRECTBUCKET4" type="int" />
+            <param name="DIRECTBUCKET5" type="int" />
+            <param name="DIRECTBUCKET6" type="int" />
+            <param name="AGENCYBUCKET1" type="int" />
+            <param name="AGENCYBUCKET2" type="int" />
+            <param name="AGENCYBUCKET3" type="int" />
+            <param name="AGENCYBUCKET4" type="int" />
+            <param name="AGENCYBUCKET5" type="int" />
+            <param name="AGENCYBUCKET6" type="int" />
+            <param name="UPDATEDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_REPORT_LOADREPORTDATA</name>
+        <params>
+            <param name="COMPANYID" type="int" />
+            <param name="KPIREPORTMONTH" type="int"/>
+            <param name="KPIREPORTYEAR" type="int"/>
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_REPORT_UPSERTREPORTDATA</name>
+        <params>
+            <param name="COMPANYID" type="int" />
+            <param name="KPIREPORTMONTH" type="int"/>            
+            <param name="KPIREPORTYEAR" type="int"/>
+            <param name="KPIREPORTCREATEDBY" type="varchar"/>
+            <param name="KPIREPORTDATA" type="ntext"/>
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_SALESDATAFORMONTH</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_SALESDATAFORMONTH_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_BADDEBT_ARBALANCE</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_BADDEBT_ARBALANCE_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_HOLIDAYS_GETBANKINGHOLIDAYS</name>
+        <params>
+            <param name="MONTH" type="int" />
+            <param name="YEAR" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_HOLIDAYS_GETBANKINGHOLIDAYS</name>
+        <params>
+            <param name="COMPANYID" type="int" />
+            <param name="MONTH" type="int" />
+            <param name="YEAR" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_HOLIDAYS_ADDBANKINGHOLIDAY</name>
+        <params>
+            <param name="HOLIDAYDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_HOLIDAYS_ADDBANKINGHOLIDAY_TOC</name>
+        <params>
+            <param name="HOLIDAYDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_HOLIDAYS_DELETEBANKINGHOLIDAY</name>
+        <params>
+            <param name="BANKINGHOLIDAYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_HOLIDAYS_DELETEBANKINGHOLIDAY_TOC</name>
+        <params>
+            <param name="BANKINGHOLIDAYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_BREAKDOWNBYCUSTTYPE</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_BREAKDOWNBYCUSTTYPE_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_BREAKDOWNBYMARKET</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_BREAKDOWNBYMARKET_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_AMOUNTCOLLECTED</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+            <param name="REPORTMONTH" type="int" />
+            <param name="REPORTYEAR" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_AMOUNTCOLLECTED_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+            <param name="REPORTMONTH" type="int" />
+            <param name="REPORTYEAR" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_AMOUNTCOLLECTED</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_AMOUNTCOLLECTED_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_HATB_WRAPPER</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_HATB_WRAPPER_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_HATB_WRAPPER_NEW</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_HATB_WRAPPER_BY_MARKET_USA</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+            <param name="MARKETID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_HATB_WRAPPER_BY_MARKET_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+            <param name="MARKETID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_BALANCEBYCUSTOMERTYPE</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_BALANCEBYCUSTOMERTYPE_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_SALESDATABYCUSTANDDOCTYPE</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_SALESDATABYCUSTANDDOCTYPE_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_SALESDATABYDOCTYPEANDMONTH</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_SALESDATABYDOCTYPEANDMONTH_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_SALESDATABYCUSTANDDOCTYPEANDMONTH</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>KPI_DATA_SALESDATABYCUSTANDDOCTYPEANDMONTH_TOC</name>
+        <params>
+            <param name="REPORTDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>QUATTRO_GETCONTRACTATTACHMENTS</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ADDCREDITCHECKNOTE</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="CREDITAPPPREPAY" type="varchar" />
+            <param name="CREDITCHECKED" type="varchar" />
+            <param name="NOTES" type="ntext" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>REPORTS_CUSTOMERLOOKUP</name>
+        <params>
+            <param name="LOOKUPTYPE" type="varchar" />
+            <param name="SEARCHTEXT" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>REPORTS_REVENUEFLASH</name>
+        <params>
+            <param name="ASOFDATE" type="date" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="MARKETID" type="varchar" />
+            <param name="SHOWPRODUCTION" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>REPORTS_REVENUEFLASH2</name>
+        <params>
+            <param name="ASOFDATE" type="date" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="MARKETID" type="varchar" />
+            <param name="SHOWPRODUCTION" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>REPORTS_CONTRACTSBYCUSTOMER</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENDDATE" type="date" />
+            <param name="CUSTOMERTYPE" type="varchar" />
+            <param name="CONTRACTVALUE" type="varchar" />
+            <param name="STATUS" type="varchar" />
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>REPORTS_CUSTOMERBREAKDOWN</name>
+        <params>
+            <param name="REPORTYEAR" type="int" />
+            <param name="COMPARETOYEAR" type="int" />
+            <param name="SHOWCONSOLIDATED" type="int" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="MARKETID" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETETHNICITYGRID</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_UPSERTETHNICITIES</name>
+        <params>
+            <param name="ETHNICITYID" type="int" />
+            <param name="ETHNICITYDESC" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETAEDASHBOARD</name>
+        <params>
+            <param name="DAYS" type="int" />
+            <param name="AEID" type="varchar" />
+            <param name="NTID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETCONTRACTS</name>
+        <params>
+            <param name="COMPANYID" type="int" />
+            <param name="MARKETID" type="varchar" />
+            <param name="SUBMARKETID" type="int" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="AEID" type="varchar" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="AGENCYID" type="varchar" />
+            <param name="MEDIATYPEID" type="varchar" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="STARTDATE" type="date" />
+            <param name="ENDDATE" type="date" />
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_TOGGLEWEBIMAGEGROUP</name>
+        <params>
+            <param name="IDGROUP" type="structured" />
+            <param name="ISWEBIMAGE" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETCONTRACTDETAIL</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETTAGDETAIL</name>
+        <params>
+            <param name="FILEID" type="int" />
+            <param name="CONTRACTNUMBER" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_ADDNONREVENUECONTRACT</name>
+        <params>
+            <param name="PRODUCTCLASSID" type="int" />
+            <param name="AGENCYID" type="varchar" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="AEID" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="QUANTITY" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_ADDNONREVENUELINEITEM</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="QUANTITY" type="int" />
+            <param name="ISBONUS" type="varchar" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_UPDATETAGGROUP</name>
+        <params>
+            <param name="TAGGROUP" type="structured" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_ADDTAGGROUP</name>
+        <params>
+            <param name="TAGGROUP" type="structured" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_UPDATEISDELETEDGROUP</name>
+        <params>
+            <param name="IDGROUP" type="structured" />
+            <param name="ISDELETED" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_ADDTAG</name>
+        <params>
+            <param name="ID" type="int" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="LINEITEMNUMBER" type="int" />
+            <param name="ISHEROQUALITY" type="varchar" />
+            <param name="ISMARKETINGQUALITY" type="varchar" />
+            <param name="TAKENBY" type="varchar" />
+            <param name="NOTES" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_UPDATEISDELETED</name>
+        <params>
+            <param name="ID" type="int" />
+            <param name="ISDELETED" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_DELETETAG</name>
+        <params>
+            <param name="ID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_DELETERECORD</name>
+        <params>
+            <param name="ID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_ADDITEM</name>
+        <params>
+            <param name="ORIGINALNAME" type="varchar" />
+            <param name="FILEEXTENSION" type="varchar" />
+            <param name="FILESIZE" type="int" />
+            <param name="FILETYPE" type="varchar" />
+            <param name="BATCHID" type="int" />
+            <param name="UPLOADEDBY" type="varchar" />
+            <param name="IMAGELAT" type="decimal" />
+            <param name="IMAGELONG" type="decimal" />
+            <param name="DATETAKEN" type="datetime" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_ADDBATCH</name>
+        <params>
+            <param name="UPLOADEDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETIMAGEPROPERTIES</name>
+        <params>
+            <param name="ID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETSTATIONDASHBOARD</name>
+        <params>
+            <param name="NUMPERPAGE" type="int" />
+            <param name="PAGENUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+            <param name="MARKETID" type="varchar" />
+            <param name="STATIONID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETDASHBOARD_TAGGED</name>
+        <params>
+            <param name="NUMPERPAGE" type="int" />
+            <param name="PAGENUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+            <param name="SEARCHTEXT" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="MARKETID" type="varchar" />
+            <param name="SALESMARKETID" type="int" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="PARENTPRODUCTCLASSID" type="int" />
+            <param name="PRODUCTCLASSID" type="int" />
+            <param name="MEDIATYPEID" type="varchar" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="AGENCYID" type="varchar" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="AEID" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="CONTRACTSTARTDATEFROM" type="date" />
+            <param name="CONTRACTSTARTDATETO" type="date" />
+            <param name="CONTRACTENDDATEFROM" type="date" />
+            <param name="CONTRACTENDDATETO" type="date" />
+            <param name="STATUS" type="varchar" />
+            <param name="MARKETING" type="varchar" />
+            <param name="HERO" type="varchar" />
+            <param name="UPLOADEDBY" type="varchar" />
+            <param name="ORIGINALNAME" type="varchar" />
+            <param name="DOCUMENTTYPE" type="varchar" />
+            <param name="NOTES" type="varchar" />
+            <param name="UPLOADEDDATEFROM" type="datetime" />
+            <param name="UPLOADEDDATETO" type="datetime" />
+            <param name="STATIONID" type="int" />
+            <param name="ISWEBIMAGE" type="int" />
+            <param name="ETHNICITYID" type="int" />
+            <param name="EXCLUDEMTA" type="int" />
+            <param name="EXCLUDETWINAMERICA" type="int" />
+            <param name="EXCLUDEDECAMP" type="int" />
+            <param name="EXCLUDEBILLBOARDS" type="int" />
+            <param name="USECONSOLIDATED" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETDASHBOARD_UNTAGGED</name>
+        <params>
+            <param name="NUMPERPAGE" type="int" />
+            <param name="PAGENUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+            <param name="SEARCHTEXT" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="MARKETID" type="varchar" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="PARENTPRODUCTCLASSID" type="int" />
+            <param name="PRODUCTCLASSID" type="int" />
+            <param name="MEDIATYPEID" type="varchar" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="AGENCYID" type="varchar" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="AEID" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="CONTRACTSTARTDATEFROM" type="date" />
+            <param name="CONTRACTSTARTDATETO" type="date" />
+            <param name="CONTRACTENDDATEFROM" type="date" />
+            <param name="CONTRACTENDDATETO" type="date" />
+            <param name="STATUS" type="varchar" />
+            <param name="MARKETING" type="varchar" />
+            <param name="HERO" type="varchar" />
+            <param name="UPLOADEDBY" type="varchar" />
+            <param name="ORIGINALNAME" type="varchar" />
+            <param name="DOCUMENTTYPE" type="varchar" />
+            <param name="NOTES" type="varchar" />
+            <param name="UPLOADEDDATEFROM" type="date" />
+            <param name="UPLOADEDDATETO" type="date" />
+            <param name="STATIONID" type="int" />
+            <param name="ISWEBIMAGE" type="int" />
+            <param name="ETHNICITYID" type="int" />
+            <param name="EXCLUDEMTA" type="int" />
+            <param name="EXCLUDETWINAMERICA" type="int" />
+            <param name="EXCLUDEDECAMP" type="int" />
+            <param name="EXCLUDEBILLBOARDS" type="int" />
+            <param name="USECONSOLIDATED" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_UPSERTTOCPRODUCTIONCOST</name>
+        <params>
+            <param name="PRODCOSTID" type="int" />
+            <param name="UIDCMPGN" type="int" />
+            <param name="PRODTYPE" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+            <param name="PRODCOSTAMOUNT" type="decimal" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_UPSERTPRODUCTIONOVERRIDE</name>
+        <params>
+            <param name="OVERRIDEID" type="int" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+            <param name="OVERRIDEPERCENTAGE" type="decimal" />
+            <param name="OVERRIDEAMOUNT" type="decimal" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_GETPRODCOSTGRID</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="PRODTYPE" type="varchar" />
+            <param name="CONTRACTNUMBER" type="varchar" />
+            <param name="CUSTOMERNAME" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_GETPRODOVERRIDEGRID</name>
+        <params>
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+            <param name="CONTRACTNUMBER" type="varchar" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_PROCESSANDREBUILDCOMMISSIONS</name>
+        <params>
+            <param name="YEAR" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONREPORTS_GETAECOMMISSIONBYMARKET</name>
+        <params>
+            <param name="ASOFDATE" type="date" />
+            <param name="WANTACTIVEONLY" type="int" />
+            <param name="NOHIDDEN" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONREPORTS_COMMISSIONANALYSIS</name>
+        <params>
+            <param name="ASOFDATE" type="date" />
+            <param name="WANTACTIVEONLY" type="int" />
+            <param name="NOHIDDEN" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONREPORTS_GETFLASHAEDATA</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENDDATE" type="date" />
+            <param name="AEID" type="varchar" />
+            <param name="COMPANYID" type="int" />
+            <param name="YEAR" type="int" />
+            <param name="USEINVOICECREATIONDATE" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONREPORTS_GETFLASHREPORT</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENDDATE" type="date" />
+            <param name="USEINVOICECREATIONDATE" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONREPORTS_GETACCOUNTINGREPORT</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENDDATE" type="date" />
+            <param name="WANTACTIVEONLY" type="int" />
+            <param name="NOHIDDEN" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_DEBUGFLASHCOMMISSION</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENDDATE" type="date" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="AEID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>_DB_MAINTENANCE_PREPAREAGEDFLASHREVENUETABLE</name>
+        <params>
+            <param name="ASOFDATE" type="datetime" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ONLINEFLASH_GETCONTRACTDETAIL</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ONLINEFLASH_GETQUARTERLYFLASHREPORT</name>
+        <params>
+            <param name="YEAR" type="int" />
+            <param name="QUARTER" type="int" />
+            <param name="COMPANYID" type="int" />
+            <param name="MARKETID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ONLINEFLASH_GETAGEDREVFLASHREPORT</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENTRYDATESTART" type="date" />
+            <param name="ENTRYDATEEND" type="date" />
+            <param name="COMPANYID" type="int" />
+            <param name="TRANSITY" type="varchar" />
+            <param name="TRANSITN" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="PARENTPRODUCTCLASSID" type="int" />
+            <param name="PRODUCTCLASSID" type="int" />
+            <param name="CUSTOMERCODE" type="varchar" />
+            <param name="CONTRACTFROM" type="date" />
+            <param name="CONTRACTTO" type="date" />
+            <param name="CONTRACTENDDATEFROM" type="date" />
+            <param name="CONTRACTENDDATETO" type="date" />
+            <param name="BILLINGFROM" type="date" />
+            <param name="BILLINGTO" type="date" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="MEDIATYPEID" type="varchar" />
+            <param name="MARKETID" type="varchar" />
+            <param name="LOCALSHIPIN" type="int" />
+            <param name="LOCAL" type="varchar" />
+            <param name="SHIPIN" type="varchar" />
+            <param name="SHIPOUT" type="varchar" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="AEID" type="varchar" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="AGENCYID" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="REVENUETYPE" type="varchar" />
+            <param name="LOCALITY" type="varchar" />
+            <param name="SUMFIELDS" type="varchar"/>
+            <param name="ORDERBY" type="varchar"/>
+            <param name="SHOWCONSOLIDATED" type="int" />
+            <param name="INVOICECREATIONDATEFROM" type="date" />
+            <param name="INVOICECREATIONDATETO" type="date" />
+            <param name="EXCLUDEMTA" type="int" />
+            <param name="EXCLUDEDELETIONS" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ONLINEFLASH_GETREVFLASHREPORT</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENTRYDATESTART" type="date" />
+            <param name="ENTRYDATEEND" type="date" />
+            <param name="COMPANYID" type="int" />
+            <param name="TRANSITY" type="varchar" />
+            <param name="TRANSITN" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="PARENTPRODUCTCLASSID" type="int" />
+            <param name="PRODUCTCLASSID" type="int" />
+            <param name="CUSTOMERCODE" type="varchar" />
+            <param name="CONTRACTFROM" type="date" />
+            <param name="CONTRACTTO" type="date" />
+            <param name="CONTRACTENDDATEFROM" type="date" />
+            <param name="CONTRACTENDDATETO" type="date" />
+            <param name="BILLINGFROM" type="date" />
+            <param name="BILLINGTO" type="date" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="MEDIATYPEID" type="varchar" />
+            <param name="MARKETID" type="varchar" />
+            <param name="LOCALSHIPIN" type="int" />
+            <param name="LOCAL" type="varchar" />
+            <param name="SHIPIN" type="varchar" />
+            <param name="SHIPOUT" type="varchar" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="AEID" type="varchar" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="AGENCYID" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="REVENUETYPE" type="varchar" />
+            <param name="LOCALITY" type="varchar" />
+            <param name="SUMFIELDS" type="varchar"/>
+            <param name="ORDERBY" type="varchar"/>
+            <param name="SHOWCONSOLIDATED" type="int" />
+            <param name="INVOICECREATIONDATEFROM" type="date" />
+            <param name="INVOICECREATIONDATETO" type="date" />
+            <param name="EXCLUDEMTA" type="int" />
+            <param name="EXCLUDEDELETIONS" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ONLINEFLASH_GETFLASHREPORT</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENTRYDATESTART" type="date" />
+            <param name="ENTRYDATEEND" type="date" />
+            <param name="COMPANYID" type="int" />
+            <param name="TRANSITY" type="varchar" />
+            <param name="TRANSITN" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="PARENTPRODUCTCLASSID" type="int" />
+            <param name="PRODUCTCLASSID" type="int" />
+            <param name="CUSTOMERCODE" type="varchar" />
+            <param name="CONTRACTFROM" type="date" />
+            <param name="CONTRACTTO" type="date" />
+            <param name="CONTRACTENDDATEFROM" type="date" />
+            <param name="CONTRACTENDDATETO" type="date" />
+            <param name="BILLINGFROM" type="date" />
+            <param name="BILLINGTO" type="date" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="MEDIATYPEID" type="varchar" />
+            <param name="MARKETID" type="varchar" />
+            <param name="LOCALSHIPIN" type="int" />
+            <param name="LOCAL" type="varchar" />
+            <param name="SHIPIN" type="varchar" />
+            <param name="SHIPOUT" type="varchar" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="AEID" type="varchar" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="AGENCYID" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="REVENUETYPE" type="varchar" />
+            <param name="LOCALITY" type="varchar" />
+            <param name="SUMFIELDS" type="varchar"/>
+            <param name="ORDERBY" type="varchar"/>
+            <param name="SHOWCONSOLIDATED" type="int" />
+            <param name="INVOICECREATIONDATEFROM" type="date" />
+            <param name="INVOICECREATIONDATETO" type="date" />
+            <param name="EXCLUDEMTA" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ONLINEFLASH_BILLINGSFLASHREPORT</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENTRYDATESTART" type="date" />
+            <param name="ENTRYDATEEND" type="date" />
+            <param name="COMPANYID" type="int" />
+            <param name="TRANSITY" type="varchar" />
+            <param name="TRANSITN" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="PARENTPRODUCTCLASSID" type="int" />
+            <param name="PARENTPRODUCTCLASSIDLIST" type="structured" />
+            <param name="PRODUCTCLASSID" type="int" />
+            <param name="PRODUCTCLASSIDLIST" type="structured" />
+            <param name="CUSTOMERCODE" type="varchar" />
+            <param name="CONTRACTFROM" type="date" />
+            <param name="CONTRACTTO" type="date" />
+            <param name="CONTRACTENDDATEFROM" type="date" />
+            <param name="CONTRACTENDDATETO" type="date" />
+            <param name="BILLINGFROM" type="date" />
+            <param name="BILLINGTO" type="date" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="MEDIAFORMIDLIST" type="structured" />
+            <param name="MEDIATYPEID" type="varchar" />
+            <param name="MEDIATYPEIDLIST" type="structured" />
+            <param name="MARKETID" type="varchar" />
+            <param name="MARKETIDLIST" type="structured" />
+            <param name="LOCALSHIPIN" type="int" />
+            <param name="LOCAL" type="varchar" />
+            <param name="SHIPIN" type="varchar" />
+            <param name="SHIPOUT" type="varchar" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="PROFITCENTERIDLIST" type="structured" />
+            <param name="AEID" type="varchar" />
+            <param name="AEIDLIST" type="structured" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="AGENCYID" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="REVENUETYPE" type="varchar" />
+            <param name="LOCALITY" type="varchar" />
+            <param name="SUMFIELDS" type="varchar"/>
+            <param name="ORDERBY" type="varchar"/>
+            <param name="SHOWCONSOLIDATED" type="int" />
+            <param name="INVOICECREATIONDATEFROM" type="date" />
+            <param name="INVOICECREATIONDATETO" type="date" />
+            <param name="EXCLUDEMTA" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ONLINEFLASH_GETFLASHDATADUMP</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENTRYDATESTART" type="date" />
+            <param name="ENTRYDATEEND" type="date" />
+            <param name="COMPANYID" type="int" />
+            <param name="TRANSITY" type="varchar" />
+            <param name="TRANSITN" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="PARENTPRODUCTCLASSID" type="int" />
+            <param name="PRODUCTCLASSID" type="int" />
+            <param name="CUSTOMERCODE" type="varchar" />
+            <param name="CONTRACTFROM" type="date" />
+            <param name="CONTRACTTO" type="date" />
+            <param name="BILLINGFROM" type="date" />
+            <param name="BILLINGTO" type="date" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="MEDIATYPEID" type="varchar" />
+            <param name="MARKETID" type="varchar" />
+            <param name="LOCALSHIPIN" type="int" />
+            <param name="LOCAL" type="varchar" />
+            <param name="SHIPIN" type="varchar" />
+            <param name="SHIPOUT" type="varchar" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="AEID" type="varchar" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="AGENCYID" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="REVENUETYPE" type="varchar" />
+            <param name="LOCALITY" type="varchar" />
+            <param name="SUMFIELDS" type="varchar"/>
+            <param name="ORDERBY" type="varchar"/>
+            <param name="SHOWCONSOLIDATED" type="int" />
+            <param name="INVOICECREATIONDATEFROM" type="date" />
+            <param name="INVOICECREATIONDATETO" type="date" />
+            <param name="EXCLUDEMTA" type="int" />
+            <param name="STARTYEAR" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ONLINEFLASH_GETREVFLASHDATADUMP</name>
+        <params>
+            <param name="STARTDATE" type="date" />
+            <param name="ENTRYDATESTART" type="date" />
+            <param name="ENTRYDATEEND" type="date" />
+            <param name="COMPANYID" type="int" />
+            <param name="TRANSITY" type="varchar" />
+            <param name="TRANSITN" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="PARENTPRODUCTCLASSID" type="int" />
+            <param name="PRODUCTCLASSID" type="int" />
+            <param name="CUSTOMERCODE" type="varchar" />
+            <param name="CONTRACTFROM" type="date" />
+            <param name="CONTRACTTO" type="date" />
+            <param name="BILLINGFROM" type="date" />
+            <param name="BILLINGTO" type="date" />
+            <param name="MEDIAFORMID" type="int" />
+            <param name="MEDIATYPEID" type="varchar" />
+            <param name="MARKETID" type="varchar" />
+            <param name="LOCALSHIPIN" type="int" />
+            <param name="LOCAL" type="varchar" />
+            <param name="SHIPIN" type="varchar" />
+            <param name="SHIPOUT" type="varchar" />
+            <param name="PROFITCENTERID" type="int" />
+            <param name="AEID" type="varchar" />
+            <param name="ADVERTISERID" type="varchar" />
+            <param name="AGENCYID" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="REVENUETYPE" type="varchar" />
+            <param name="LOCALITY" type="varchar" />
+            <param name="SUMFIELDS" type="varchar"/>
+            <param name="ORDERBY" type="varchar"/>
+            <param name="SHOWCONSOLIDATED" type="int" />
+            <param name="INVOICECREATIONDATEFROM" type="date" />
+            <param name="INVOICECREATIONDATETO" type="date" />
+            <param name="EXCLUDEMTA" type="int" />
+            <param name="STARTYEAR" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>APP_GETUSERPREFERENCES</name>
+        <params>
+            <param name="USERID" type="varchar" />
+            <param name="SCREEN" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>APP_UPSERTUSERPREFERENCES</name>
+        <params>
+            <param name="USERPREFERENCES" type="structured" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_CHECKEXISTINGCONTRACTCOMMISSIONEFFECTIVEDATE</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+            <param name="EFFECTIVEDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_GETCOMMSPLITSGRID</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="AGENCY" type="varchar" />
+            <param name="ADVERTISER" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="AENAME" type="varchar" />
+            <param name="COMPANY" type="varchar" />
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_ADDAECOMMISSIONAMOUNTRECORD</name>
+        <params>
+            <param name="AEID" type="varchar" />
+            <param name="COMMISSIONYEAR" type="int" />
+            <param name="COMMISSIONAMOUNT" type="decimal" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_CHECKEXISTINGCOMMISSIONAMOUNTYEAR</name>
+        <params>
+            <param name="AEID" type="varchar" />            
+            <param name="COMPANYID" type="int" />
+            <param name="YEAR" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_DELETEAECOMMISSIONAMOUNTRECORD</name>
+        <params>
+            <param name="AECOMMISSIONAMOUNTID" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETCOMMISSIONAMOUNTHISTORY</name>
+        <params>
+            <param name="AEID" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETCOMMISSIONSAMOUNTRECORD</name>
+        <params>
+            <param name="AECOMMISSIONAMOUNTID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_UPDATECOMMISSIONAMOUNTRECORD</name>
+        <params>
+            <param name="AECOMMISSIONAMOUNTID" type="int" />
+            <param name="COMMISSIONYEAR" type="int" />
+            <param name="COMMISSIONAMOUNT" type="decimal" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_TOGGLEAEREPORTING</name>
+        <params>
+            <param name="AEID" type="varchar" />
+            <param name="ISHIDDEN" type="int" />
+            <param name="COMPANYID" type="int" />
+            <param name="UPDATEDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_ADDCUSTOMERXREF</name>
+        <params>
+            <param name="CUSTOMERID" type="varchar" />
+            <param name="NEWCUSTOMERID" type="varchar" />
+            <param name="NEWCUSTOMERNAME" type="varchar" />
+            <param name="REPORTDISPLAYID" type="varchar" />
+            <param name="REPORTDISPLAYNAME" type="varchar" />
+            <param name="COMPANYID" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_UPDATEMEDIAFORMROLLUP</name>
+        <params>
+            <param name="MEDIAFORMID" type="int" />
+            <param name="ROLLUPNAME" type="varchar" />
+            <param name="SHOULDBE" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETMEDIAFORMROLLUPGRID</name>
+        <params>
+            <param name="MEDIA_TYPE_DESCRIPTION" type="varchar" />
+            <param name="MEDIA_FORM_DESCRIPTION" type="varchar" />
+            <param name="ROLLUP_NAME" type="varchar" />
+            <param name="SHOULD_BE" type="varchar" />
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETCUSTOMERROLLUP</name>
+        <params>
+            <param name="CUSTOMER_ID" type="varchar" />
+            <param name="CUSTOMER_NAME" type="varchar" />
+            <param name="NEW_CUSTOMER_ID" type="varchar" />
+            <param name="NEW_CUSTOMER_NAME" type="varchar" />
+            <param name="COMPANY_NAME" type="varchar" />
+            <param name="COMPANYID" type="int" />
+            <param name="SORTBY" type="varchar" />
+            <param name="SORTDIR" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETRATESBYRATEID</name>
+        <params>
+            <param name="RATEID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_CHECKEXISTINGPROFITCENTERRATEEFFECTIVEDATE</name>
+        <params>
+            <param name="PROFITCENTERID" type="int" />
+            <param name="EFFECTIVEDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_ADDRATEPROFITCENTERXREFRECORD</name>
+        <params>
+            <param name="PROFITCENTERID" type="int" />
+            <param name="RATEID" type="int" />
+            <param name="EFFECTIVEDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_DELETERATEPROFITCENTERXREFRECORD</name>
+        <params>
+            <param name="RATEPROFITCENTERXREFID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_DELETEALLRATEGROUPPACKAGEBYPAGE</name>
+        <params>
+            <param name="RATEID" type="int" />
+            <param name="PANELCODELIST" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_ADDALLRATEGROUPPACKAGEBYPAGE</name>
+        <params>
+            <param name="RATEID" type="int" />
+            <param name="PANELCODELIST" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_ADDALLRATEGROUPPACKAGE</name>
+        <params>
+            <param name="RATEID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_DELETEALLRATEGROUPPACKAGES</name>
+        <params>
+            <param name="RATEID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_ADDRATEGROUPPACKAGE</name>
+        <params>
+            <param name="RATEID" type="int" />
+            <param name="PANELCODE" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_DELETERATEGROUPPACKAGE</name>
+        <params>
+            <param name="RATEID" type="int" />
+            <param name="PANELCODE" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETPANELCODESWITHRATEINDICATOR</name>
+        <params>
+            <param name="RATEID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_CHECKEXISTINGRATENAME</name>
+        <params>
+            <param name="RATENAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_CHECKEXISTINGRATEDETAILEFFECTIVEDATE</name>
+        <params>
+            <param name="RATEID" type="int" />
+            <param name="RATEEFFECTIVEDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_UPDATERATE</name>
+        <params>
+            <param name="RATEID" type="int" />
+            <param name="RATENAME" type="varchar" />
+            <param name="RATEDETAILID" type="int" />
+            <param name="RATELOCALRENEW" type="decimal" />
+            <param name="RATELOCALNEW" type="decimal" />
+            <param name="RATENATIONALRENEW" type="decimal" />
+            <param name="RATENATIONALNEW" type="decimal" />
+            <param name="ACTIVE" type="varchar" />
+            <param name="ISPACKAGE" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_ADDRATE</name>
+        <params>
+            <param name="RATENAME" type="varchar" />
+            <param name="RATELOCALRENEW" type="decimal" />
+            <param name="RATELOCALNEW" type="decimal" />
+            <param name="RATENATIONALRENEW" type="decimal" />
+            <param name="RATENATIONALNEW" type="decimal" />
+            <param name="RATEEFFECTIVEDATE" type="date" />
+            <param name="ACTIVE" type="char" />
+            <param name="ISPACKAGE" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_ADDRATEDETAIL</name>
+        <params>
+            <param name="RATEID" type="int" />
+            <param name="RATELOCALRENEW" type="decimal" />
+            <param name="RATELOCALNEW" type="decimal" />
+            <param name="RATENATIONALRENEW" type="decimal" />
+            <param name="RATENATIONALNEW" type="decimal" />
+            <param name="RATEEFFECTIVEDATE" type="date" />
+            <param name="ACTIVE" type="char" />
+            <param name="ISPACKAGE" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETAEFLATRATERECORD</name>
+        <params>
+            <param name="FLATRATEID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_DELETEFLATRATERECORD</name>
+        <params>
+            <param name="AEFLATRATEID" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_CHECKEXISTINGFLATRATEEFFECTIVEDATE</name>
+        <params>
+            <param name="AEID" type="varchar" />
+            <param name="COMPANYID" type="int" />
+            <param name="FLATRATEEFFECTIVEDATE" type="date" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_UPDATEAEFLATRATE</name>
+        <params>
+            <param name="FLATRATEID" type="int" />
+            <param name="FLATRATENEW" type="decimal" />
+            <param name="FLATRATERENEW" type="decimal" />
+            <param name="FLATRATEEFFECTIVEDATE" type="date" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_ADDAEFLATRATE</name>
+        <params>
+            <param name="AEID" type="varchar" />
+            <param name="FLATRATENEW" type="decimal" />
+            <param name="FLATRATERENEW" type="decimal" />
+            <param name="FLATRATEEFFECTIVEDATE" type="date" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_DELETEDRAWPAYMENTRECORD</name>
+        <params>
+            <param name="DRAWPAYMENTID" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_ADDDRAWPAYMENTRECORD</name>
+        <params>
+            <param name="AEID" type="varchar" />
+            <param name="DRAWPAYMENTTYPE" type="char" />
+            <param name="DRAWPAYMENTAMOUNT" type="decimal" />
+            <param name="DRAWPAYMENTYEAR" type="int" />
+            <param name="PAYMENTMONTH" type="int" />
+            <param name="PAYMENTDATE" type="date" />
+            <param name="PAYMENTSTATUS" type="char" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_UPDATEDRAWPAYMENTRECORD</name>
+        <params>
+            <param name="DRAWPAYMENTID" type="int" />
+            <param name="DRAWPAYMENTTYPE" type="char" />
+            <param name="DRAWPAYMENTAMOUNT" type="decimal" />
+            <param name="DRAWPAYMENTYEAR" type="int" />
+            <param name="PAYMENTMONTH" type="int" />
+            <param name="PAYMENTDATE" type="date" />
+            <param name="PAYMENTSTATUS" type="char" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETDRAWPAYMENTRECORD</name>
+        <params>
+            <param name="DRAWPAYMENTID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETDRAWPAYMENTHISTORY</name>
+        <params>
+            <param name="AEID" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETRATEDETAILHISTORYBYPROFITCENTERID</name>
+        <params>
+            <param name="PROFITCENTERID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>MASTERDATA_GETRATEDETAILBYID</name>
+        <params>
+            <param name="RATEDETAILID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_UPDATECOMMISSIONALLOCATION</name>
+        <params>
+            <param name="COMMISSIONID" type="int" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="EFFECTIVEDATE" type="datetime" />
+            <param name="PACKAGEID" type="int" />
+            <param name="AE1ID" type="varchar" />
+            <param name="AE1REVPERCENTAGE" type="numeric" />
+            <param name="AE1COMPERCENTAGE" type="numeric" />
+            <param name="AE1POINTS" type="numeric" />
+            <param name="AE2ID" type="varchar" />
+            <param name="AE2REVPERCENTAGE" type="numeric" />
+            <param name="AE2COMPERCENTAGE" type="numeric" />
+            <param name="AE2POINTS" type="numeric" />
+            <param name="AE3ID" type="varchar" />
+            <param name="AE3REVPERCENTAGE" type="numeric" />
+            <param name="AE3COMPERCENTAGE" type="numeric" />
+            <param name="AE3POINTS" type="numeric" />
+            <param name="USEPOINTS" type="varchar" />
+            <param name="APPROVEDBYID" type="varchar" />
+            <param name="APPROVEDBYDATE" type="datetime" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_ADDCOMMISSIONALLOCATION</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="EFFECTIVEDATE" type="datetime" />
+            <param name="PACKAGEID" type="int" />
+            <param name="AE1ID" type="varchar" />
+            <param name="AE1REVPERCENTAGE" type="numeric" />
+            <param name="AE1COMPERCENTAGE" type="numeric" />
+            <param name="AE1POINTS" type="numeric" />
+            <param name="AE2ID" type="varchar" />
+            <param name="AE2REVPERCENTAGE" type="numeric" />
+            <param name="AE2COMPERCENTAGE" type="numeric" />
+            <param name="AE2POINTS" type="numeric" />
+            <param name="AE3ID" type="varchar" />
+            <param name="AE3REVPERCENTAGE" type="numeric" />
+            <param name="AE3COMPERCENTAGE" type="numeric" />
+            <param name="AE3POINTS" type="numeric" />
+            <param name="USEPOINTS" type="varchar" />
+            <param name="APPROVEDBYID" type="varchar" />
+            <param name="APPROVEDBYDATE" type="datetime" />
+            <param name="ENTEREDBY" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_DELETECONTRACTDETAILHISTORYITEM</name>
+        <params>
+            <param name="COMMISSIONID" type="int" />
+            <param name="ENTEREDBY" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_GETCONTRACTDETAILHISTORYITEM</name>
+        <params>
+            <param name="COMMISSIONID" type="int" />
+            <param name="SOURCE" type="varchar" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>GETCONTRACTS</name>
+        <params>
+            <param name="STARTINDEX" type="int" />
+            <param name="MAXIMUMROWS" type="int" />
+            <param name="SORTEXPRESSION" type="varchar" />
+            <param name="COMPANYID" type="int" />
+            <param name="CONTRACTNUMBER" type="varchar" />
+            <param name="ADVERTISERCODE" type="varchar" />
+            <param name="AGENCYCODE" type="varchar" />
+            <param name="PROGRAM" type="varchar" />
+            <param name="AE1ID" type="varchar" />
+            <param name="AE2ID" type="varchar" />
+            <param name="AE3ID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ADDNOTE</name>
+        <params>
+            <param name="SCREENNAME" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="NOTETEXT" type="ntext" />
+            <param name="COMPANYID" type="int" />
+            <param name="USERID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>GETNOTES</name>
+        <params>
+            <param name="SCREENNAME" type="varchar" />
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_GETCONTRACTDETAILHISTORY</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="COMMISSIONID" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>COMMISSIONS_GETCONTRACTDETAIL</name>
+        <params>
+            <param name="CONTRACTNUMBER" type="int" />
+            <param name="COMMISSIONID" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ADDEXCEPTION</name>
+        <params>
+            <param name="EXCEPTION_INFO" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>ADDDEBUGMSG</name>
+        <params>
+            <param name="DEBUGMSG" type="ntext" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>UNTAGIMAGE</name>
+        <params>
+            <param name="DLID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>GETAGENCIES</name>
+        <params>
+            <param name="COUNTRYID" type="varchar" />
+            <param name="SEARCHNAME" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETE_GETSTATIONS</name>
+        <params>
+            <param name="PREFIX" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="MARKETID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETE_GETMEDIAFORMS</name>
+        <params>
+            <param name="PREFIX" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="MEDIATYPEID" type="varchar" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETE_GETPRODUCTCLASSES</name>
+        <params>
+            <param name="PREFIX" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="PARENTPRODUCTCLASSID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETE_GETREVCONTRACTS</name>
+        <params>
+            <param name="PREFIX" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="SHOWCOUNTRY" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETECONTRACTS</name>
+        <params>
+            <param name="TERM" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="SHOWCOUNTRY" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETEMEDIAFORMS</name>
+        <params>
+            <param name="TERM" type="varchar" />
+            <param name="MEDIATYPEID" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETEAES</name>
+        <params>
+            <param name="TERM" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETE_GETCONTRACTS</name>
+        <params>
+            <param name="PREFIX" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="SHOWCOUNTRY" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETE_GETAES</name>
+        <params>
+            <param name="PREFIX" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETE_GETAGENCIES</name>
+        <params>
+            <param name="PREFIX" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETAGENCIESAUTOCOMPLETE</name>
+        <params>
+            <param name="PREFIX" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>AUTOCOMPLETE_GETADVERTISERS</name>
+        <params>
+            <param name="PREFIX" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_GETADVERTISERSAUTOCOMPLETE</name>
+        <params>
+            <param name="PREFIX" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_AUTOCOMPLETEADVERTISERS</name>
+        <params>
+            <param name="TERM" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+    <storedproc>
+        <name>DIGITALLIBRARY_AUTOCOMPLETEAGENCIES</name>
+        <params>
+            <param name="TERM" type="varchar" />
+            <param name="COUNT" type="int" />
+            <param name="COMPANYID" type="int" />
+        </params>
+    </storedproc>
+</storedprocedures>
